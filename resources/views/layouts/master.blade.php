@@ -1,9 +1,45 @@
+@php
+    $global_setting = app\Models\GlobalSetting::all()->first();
+    if(isset($normal)){
+        $seo = $normal;
+    }
+    elseif(isset($job)){
+        $seo = $job;
+    }
+@endphp
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahid Memorial Hospital</title>
+      <!-----SEO--------->
+
+  <title>{{$seo->page_titile ?? $global_setting->page_title}}</title>
+  <meta name="title" content="{{$seo->page_titile ?? $global_setting->page_title}}">
+  <meta name="description" content="{{$seo->page_description ?? $global_setting->page_description}}">
+  <meta name="keywords" content="{{$seo->page_keyword ?? $global_setting->page_keyword}}">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="1 days">
+  <meta name="author" content="{{$global_setting->site_name ?? ''}}">
+
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{$global_setting->website_full_address ?? ''}}">
+  <meta property="og:title" content="{{$seo->page_title ?? $global_setting->page_title}}">
+  <meta property="og:description" content="{{$seo->page_description ?? $global_setting->page_description}}">
+  <meta property="og:image" content="{{$seo->banner_image ?? '/uploads/icons/'.$global_setting->site_logo}}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{$global_setting->website_full_address ?? ''}}">
+  <meta property="twitter:title" content="{{$seo->page_title ?? $global_setting->page_title}}">
+  <meta property="twitter:description" content="{{$seo->page_description ?? $global_setting->page_description}}">
+  <meta property="twitter:image" content="{{$seo->banner_image ?? '/uploads/icons/'.$global_setting->site_logo}}">
+  <link rel="icon" type="image/png" sizes="56x56" href="{{$global_setting->favicon}}"> 
+<!-----END SEO------->
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900|Work+Sans:300,400,500,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
@@ -21,7 +57,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-7 logo">
                     <div class=" site-branding">
-                        <a href="index.php" class="custom-logo-link"><img width="290" height="50" src="/website/images/logo.png" class="custom-logo" alt="Sahid Memorial Hospital" ></a>
+                        <a href="/" class="custom-logo-link"><img width="290" height="50" src="/uploads/icons/{{$global_setting->site_logo}}" class="custom-logo" alt="Sahid Memorial Hospital" ></a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12">
@@ -32,19 +68,17 @@
                         <div class="main-menu-container-collapse">
                             <ul id="primary-menu" class="menu nav-menu right" aria-expanded="false">
                                 <li>  <a href="/">Home</a> </li>
-                                <li><a href="/department-main">Department</a> 
-                                        <ul>
-                                            <li><a href="department">Neurology Department</a></li>
-                                            <li><a href="department">Cardiology Department</a></li>
-                                            <li><a href="department">Pathology Department</a></li>
-                                            <li><a href="department">Laboratory Department</a></li>
-                                            <li><a href="department">Pediatric Department</a>
-                                            </li><li><a href="department">Cardiac Department</a></li>
-                                        </ul>
-                                    </li>
                                 <!------start menu--------->
                                   @foreach($menus as $menu)
-                                    <li><a href="/about">About Us</a> </li>
+                                     <li><a href="{{route('category',$menu->nav_name)}}">Department</a>
+                                        <ul>
+                                            @foreach($menu->childs as $submenu)
+                                                <li><a href="{{route('subcategory',[$menu->nav_name,$submenu->nav_name])}}">{{$submenu->caption}}</a></li>
+                                            @endforeach
+                                        </ul>
+                                         
+                                     </li>
+                                   
                                   @endforeach  
                                 <!------------end menu------------->
                             </ul>
