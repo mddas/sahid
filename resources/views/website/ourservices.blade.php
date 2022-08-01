@@ -6,72 +6,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <img src="/website/images/icon-1.png" alt=""/>
-                    </figure>
-                    <h3>24 hours Emergency</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <img src="/website/images/icon-2.png" alt=""/>
-                    </figure>
-                    <h3>Intense Care Unit</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <img src="/website/images/icon-3.png" alt=""/>
-                    </figure>
-                    <h3>Operation Theater</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <img src="/website/images/icon-4.png" alt=""/>
-                    </figure>
-                    <h3>Operation Theater</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <img src="/website/images/icon-5.png" alt=""/>
-                    </figure>
-                    <h3>Medical Counselling</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <img src="/website/images/icon-6.png" alt=""/>
-                    </figure>
-                    <h3>Mental Disease</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <img src="/website/images/icon-7.png" alt=""/>
-                    </figure>
-                    <h3>Physiotherapy</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <img src="/website/images/icon-8.png" alt=""/>
-                    </figure>
-                    <h3>24hr Radiology </h3>
-                </div>
-            </div>
+
+            @if(isset($services))
+                <!-----start service------>
+                @foreach($services as $service)
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="box">
+                            <figure>
+                                <img src="{{$service->banner_image}}" alt=""/>
+                            </figure>
+                            <h3>{{$service->caption}}</h3>
+                        </div>
+                    </div>
+                @endforeach
+                <!-----end service--->
+            @endif
             <div class="col-lg-12 col-md-12 mt-5 text-center">
-                <a class="btn btn_link" href="ourservices">Know More</a>
+                <a class="btn btn_link" href="#">Know More</a>
             </div>
         </div>
     </div>
