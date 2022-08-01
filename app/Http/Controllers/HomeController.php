@@ -62,8 +62,7 @@ class HomeController extends Controller
         //sreturn $job_categories;
         $global_setting = GlobalSetting::all()->first(); 
         //return $missons;       
-        return view("website.index");
-         return view("website.index")->with(['jobs'=>$jobs,'banners'=>$banners,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'job_categories'=>$job_categories,'message'=>$message,'process'=>$process]);
+        return view("website.index")->with(['jobs'=>$jobs,'banners'=>$banners,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'job_categories'=>$job_categories,'message'=>$message,'process'=>$process]);
     }
     public function category($menu){
         //return $menu." this is category";

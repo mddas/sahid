@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
     
     <link href="/website/css/style.css" type="text/css" rel="stylesheet"/>
+    
 </head>
 
 <body>
@@ -31,21 +32,21 @@
                         <div class="main-menu-container-collapse">
                             <ul id="primary-menu" class="menu nav-menu right" aria-expanded="false">
                                 <li>  <a href="/">Home</a> </li>
-                                <li><a href="/about">About Us</a> </li>
-                                <li><a href="/ourservices">Services</a> </li>
                                 <li><a href="/department-main">Department</a> 
-                                    <ul>
-                                        <li><a href="department">Neurology Department</a></li>
-                                        <li><a href="department">Cardiology Department</a></li>
-                                        <li><a href="department">Pathology Department</a></li>
-                                        <li><a href="department">Laboratory Department</a></li>
-                                        <li><a href="department">Pediatric Department</a>
-                                        </li><li><a href="department">Cardiac Department</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/doctors">Doctors</a> </li>
-                                <li><a href="/newsevent">News & Event</a> </li>
-                                <li> <a href="/contactus">Contact Us</a></li>
+                                        <ul>
+                                            <li><a href="department">Neurology Department</a></li>
+                                            <li><a href="department">Cardiology Department</a></li>
+                                            <li><a href="department">Pathology Department</a></li>
+                                            <li><a href="department">Laboratory Department</a></li>
+                                            <li><a href="department">Pediatric Department</a>
+                                            </li><li><a href="department">Cardiac Department</a></li>
+                                        </ul>
+                                    </li>
+                                <!------start menu--------->
+                                  @foreach($menus as $menu)
+                                    <li><a href="/about">About Us</a> </li>
+                                  @endforeach  
+                                <!------------end menu------------->
                             </ul>
                         </div>
                     </nav>
