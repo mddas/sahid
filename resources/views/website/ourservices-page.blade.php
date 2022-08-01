@@ -1,14 +1,14 @@
 @extends("layouts.master")
 @section("content")    
 
-<section class="page-title page-title-layout5 bg-img" style="background-image: url(images/6.jpg) !important; background-size: cover; background-position: center center; padding-top: 120px;">
+<section class="page-title page-title-layout5 bg-img" style="background-image: url(/website/images/6.jpg) !important; background-size: cover; background-position: center center; padding-top: 120px;">
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-between flex-wrap align-items-center">
             <h1 class="pagetitle__heading my-3">Our Services</h1>
             <nav>
               <ol class="breadcrumb my-3">
-                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item">Services</li>
               </ol>
             </nav>
@@ -22,8 +22,8 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="service-item">
                     <div class="service__icon">
-                        <img src="images/icon-1.png" alt=""/>
-                        <img src="images/icon-1.png" alt=""/>
+                        <img src="/website/images/icon-1.png" alt=""/>
+                        <img src="/website/images/icon-1.png" alt=""/>
                     </div><!-- /.service__icon -->
                     <div class="service__content">
                         <h4 class="service__title">24 hours Emergency</h4>
@@ -35,8 +35,8 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="service-item">
                     <div class="service__icon">
-                        <img src="images/icon-2.png" alt=""/>
-                        <img src="images/icon-2.png" alt=""/>
+                        <img src="/website/images/icon-2.png" alt=""/>
+                        <img src="/website/images/icon-2.png" alt=""/>
                     </div><!-- /.service__icon -->
                     <div class="service__content">
                         <h4 class="service__title">Intense Care Unit</h4>
@@ -48,8 +48,8 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="service-item">
                     <div class="service__icon">
-                        <img src="images/icon-3.png" alt=""/>
-                        <img src="images/icon-3.png" alt=""/>
+                        <img src="/website/images/icon-3.png" alt=""/>
+                        <img src="/website/images/icon-3.png" alt=""/>
                     </div><!-- /.service__icon -->
                     <div class="service__content">
                         <h4 class="service__title">Operation Theater</h4>
@@ -61,8 +61,8 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="service-item">
                     <div class="service__icon">
-                        <img src="images/icon-4.png" alt=""/>
-                        <img src="images/icon-4.png" alt=""/>
+                        <img src="/website/images/icon-4.png" alt=""/>
+                        <img src="/website/images/icon-4.png" alt=""/>
                     </div><!-- /.service__icon -->
                     <div class="service__content">
                         <h4 class="service__title">Operation Theater</h4>
@@ -74,8 +74,8 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="service-item">
                     <div class="service__icon">
-                        <img src="images/icon-5.png" alt=""/>
-                        <img src="images/icon-5.png" alt=""/>
+                        <img src="/website/images/icon-5.png" alt=""/>
+                        <img src="/website/images/icon-5.png" alt=""/>
                     </div><!-- /.service__icon -->
                     <div class="service__content">
                         <h4 class="service__title">Medical Counselling</h4>
@@ -87,8 +87,8 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="service-item">
                     <div class="service__icon">
-                        <img src="images/icon-6.png" alt=""/>
-                        <img src="images/icon-6.png" alt=""/>
+                        <img src="/website/images/icon-6.png" alt=""/>
+                        <img src="/website/images/icon-6.png" alt=""/>
                     </div><!-- /.service__icon -->
                     <div class="service__content">
                         <h4 class="service__title">Mental Disease</h4>
@@ -100,8 +100,8 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="service-item">
                     <div class="service__icon">
-                        <img src="images/icon-7.png" alt=""/>
-                        <img src="images/icon-7.png" alt=""/>
+                        <img src="/website/images/icon-7.png" alt=""/>
+                        <img src="/website/images/icon-7.png" alt=""/>
                     </div><!-- /.service__icon -->
                     <div class="service__content">
                         <h4 class="service__title">Physiotherapy</h4>
@@ -113,8 +113,8 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="service-item">
                     <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
+                        <img src="/website/images/icon-8.png" alt=""/>
+                        <img src="/website/images/icon-8.png" alt=""/>
                     </div><!-- /.service__icon -->
                     <div class="service__content">
                         <h4 class="service__title">24hr Radiology</h4>

@@ -23,7 +23,7 @@ Route::get('/about', function()
 });
 Route::get('/ourservices', function()
 {
-   return view("website.ourservices");
+   return view("website.ourservices-page");
 });
 Route::get('/department-main', function()
 {
