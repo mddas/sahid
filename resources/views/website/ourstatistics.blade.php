@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="row">
-            @if(isset(statistics) || $statistic)
+            @if(isset($statistics))
                 <!---start Statistics------>
                 @foreach($statistics as $statistic)
                         <div class="col-lg-3 col-md-3 col-sm-12">
