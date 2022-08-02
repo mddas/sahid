@@ -1,4 +1,5 @@
 <div class="banner-slider">
+    @if(isset($sliders) && $sliders!=null)
     @foreach($sliders as $index=>$slider)
         @php
         $index = $index+1;
@@ -26,5 +27,6 @@
             </div>
         </div>
     @endforeach
+    @endif
    
 </div>

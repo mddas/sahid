@@ -17,35 +17,6 @@ use App\Http\Controllers\ContactController;
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
-Route::get('/about', function()
-{
-    return view("website.about");
-});
-Route::get('/ourservices', function()
-{
-   return view("website.ourservices-page");
-});
-Route::get('/department-main', function()
-{
-    return view("website.department-main");
-});
-Route::get('/department', function()
-{
-    return view("website.department");
-});
-Route::get('/doctors', function()
-{
-    return view("website.doctors");
-});
-Route::get('/newsevent', function()
-{
-    return view("website.newsevent");
-});
-Route::get('/contactus', function()
-{
-    return view("website.contactus");
-});
-
 Route::prefix('admin')->group(function(){
     
     Route::get('/','Auth\AdminLoginController@index');

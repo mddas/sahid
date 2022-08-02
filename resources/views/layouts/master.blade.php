@@ -1,5 +1,5 @@
 @php
-    $global_setting = app\Models\GlobalSetting::all()->first();
+    $global_setting = App\Models\GlobalSetting::all()->first();
     if(isset($normal)){
         $seo = $normal;
     }
@@ -70,7 +70,7 @@
                                 <li>  <a href="/">Home</a> </li>
                                 <!------start menu--------->
                                   @foreach($menus as $menu)
-                                     <li><a href="{{route('category',$menu->nav_name)}}">Department</a>
+                                     <li><a href="{{route('category',$menu->nav_name)}}">{{$menu->caption}}</a>
                                         <ul>
                                             @foreach($menu->childs as $submenu)
                                                 <li><a href="{{route('subcategory',[$menu->nav_name,$submenu->nav_name])}}">{{$submenu->caption}}</a></li>

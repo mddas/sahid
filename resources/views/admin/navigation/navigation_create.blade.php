@@ -130,13 +130,12 @@
             <div class="clearfix"></div>
 
             <?php $page_types= App\Models\PageType::get(); ?>
-                
             <div class="form-group col-md-12">
                 <label for="page_type">Page Type <i class="reqr">*</i></label>   
                 <select class="form-control" name="page_type" id="page_type" required="" onchange="pageType(this.value)"> 
                 <option selected>----None----</option>
                  @foreach($page_types as $type)
-                    <option value="{{$type->page_type_title}}">{{$type->page_type_title}}</option>
+                    <option value="{{$type->page_type_title}}">{{$type->page_type_title}}md</option>
                  @endforeach                                  
                 </select>
             </div>            
