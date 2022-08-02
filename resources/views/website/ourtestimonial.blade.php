@@ -5,49 +5,25 @@
         <div class="row">
             <div class="col-lg-8 col-md-6 col-sm-12">
                 <div class="owl-carousel owl-theme testimonial_slider">
-                    <div class="item">
-                        <div class="testimonial_inner">
-                            <p>The kindness and consideration I received from every member of staff who treated me was
-                                exceptional. It helped a very difficult time be more bearable</p>
-                            <div class="testimonial_author">
-                                <div class="author_image">
-                                    <img src="/website/images/testimonial-1.jpg" alt="author image">
+                    @if(isset($testimonials))
+                    <!----start----->
+                      @foreach($testimonial as $testimonials)
+                        <div class="item">
+                            <div class="testimonial_inner">
+                                <p>{{$testimonial->short_content}}</p>
+                                <div class="testimonial_author">
+                                    <div class="author_image">
+                                        <img src="{{$testimonial->banner_image}}" alt="author image">
+                                    </div>
+                                    <h5>{{$testimonial->nav_name}}</h5>
+                                    <p>{{$testimonial->caption}}</p>
                                 </div>
-                                <h5>Nancy Wise</h5>
-                                <p>Web Developer</p>
+                                <i class="fas fa-quote-left"></i>
                             </div>
-                            <i class="fas fa-quote-left"></i>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial_inner">
-                            <p>The nursing care I received was absolutely fantastic. I’m not planning on needing to, but
-                                if ever I had to be seen at a hospital again, I would love to come back</p>
-                            <div class="testimonial_author">
-                                <div class="author_image">
-                                    <img src="/website/images/testimonial-2.jpg" alt="author image">
-                                </div>
-                                <h5>Nancy Wise</h5>
-                                <p>Web Developer</p>
-                            </div>
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial_inner">
-                            <p>I felt so safe and comfortable here, mainly because of the lovely nurses. I’m so happy I
-                                decided to stay overnight</p>
-                            <div class="testimonial_author">
-                                <div class="author_image">
-                                    <img src="/website/images/testimonial-1.jpg" alt="author image">
-                                </div>
-                                <h5>Nancy Wise</h5>
-                                <p>Web Developer</p>
-                            </div>
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                    </div>
-
+                       @endforeach
+                    <!---end------->
+                    @endif
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
