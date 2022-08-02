@@ -72,6 +72,7 @@
                                   @foreach($menus as $menu)
                                      <li><a href="{{route('category',$menu->nav_name)}}">{{$menu->caption}}</a>
                                         <ul>
+
                                             @foreach($menu->childs as $submenu)
                                                 <li><a href="{{route('subcategory',[$menu->nav_name,$submenu->nav_name])}}">{{$submenu->caption}}</a></li>
                                             @endforeach
