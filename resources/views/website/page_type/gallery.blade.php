@@ -1,15 +1,22 @@
 @extends("layouts.master")
 @section("content")
 		
-			<div class="theme-inner-banner">
-				<div class="overlay">
-					<div class="container">
-						<h2>Gallery</h2>
-					</div> <!-- /.container -->
-				</div> <!-- /.overlay -->
-			</div> <!-- /.theme-inner-banner -->
 
-
+<section class="page-title page-title-layout5 bg-img" style="background-image: url(/website/images/6.jpg) !important; background-size: cover; background-position: center center; padding-top: 120px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between flex-wrap align-items-center">
+            <h1 class="pagetitle__heading my-3">{{$slug_detail->nav_name ?? $slug1}}</h1>
+            <nav>
+              <ol class="breadcrumb my-3">
+                <li class="breadcrumb-item"><a href="#">{{$slug1}}</a></li>
+                <li class="breadcrumb-item">{{$slug_detail->nav_name ?? ''}}</li>
+              </ol>
+            </nav>
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
 			<!-- 
 			=============================================
 				gallery
