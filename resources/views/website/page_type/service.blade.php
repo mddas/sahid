@@ -1,6 +1,6 @@
 @extends("layouts.master")
 @section("content")
-<section class="page-title page-title-layout5 bg-img" style="background-image: url(images/6.jpg) !important; background-size: cover; background-position: center center; padding-top: 120px;">
+<section class="page-title page-title-layout5 bg-img" style="background-image: url(/website/images/6.jpg) !important; background-size: cover; background-position: center center; padding-top: 120px;">
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-between flex-wrap align-items-center">
@@ -19,102 +19,26 @@
     <section class="sahid-services">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
+            <!----data here-->
+            @foreach($services as $service)
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <div class="service__icon">
+                            <img src="{{$service->banner_image}}" onerror="this.onerror=null;this.src='/website/images/icon-8.png';">
+                            <img src="{{$service->banner_image}}" onerror="this.onerror=null;this.src='/website/images/icon-8.png';">
+                        </div><!-- /.service__icon -->
+                        <div class="service__content">
+                            <h4 class="service__title">{{$service->captiton}}</h4>
+                            <p class="service__desc">{{$service->short_content}}</p>
+                        <a href="department.php" class="btn btn-outline">
+                            <span>Read More</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                        </div><!-- /.service__content -->
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
+           @endforeach
+            <!----data end----->
         </div>
     </div>
 </section>
