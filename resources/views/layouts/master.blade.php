@@ -45,6 +45,12 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
     
     <link href="/website/css/style.css" type="text/css" rel="stylesheet"/>
+    <!-------gallery css---->
+    	<link rel="stylesheet" href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css" href="/website/css/style_gallery.css">
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="/website/css/responsive_gallery.css">
     
 </head>
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\GlobalSetting;
+use App\Models\NavigationItems;
 use App\Models\Navigation;
 use Illuminate\Http\Request;
 use App\Job;
@@ -156,7 +157,7 @@ class HomeController extends Controller
                     //$normal_notice_page = Navigation::all()->where('nav_name',$slug)->first();
             $category_id = Navigation::all()->where('nav_name',$menu)->first()->id;
             if(Navigation::all()->where('nav_name',$menu)->first()->page_type=="Photo Gallery"){//single gallery
-                $photos = Navigation::query()->where('parent_page_id',$category_id)->where('page_status','1')->latest()->get();
+                $photos = Navigationitems::query()->where('navigation_id',$category_id)->latest()->get();
                 return view("website.page_type.gallery")->with(['photos'=>$photos,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
             }
             if(Navigation::all()->where('nav_name',$menu)->first()->page_type=="Normal"){
@@ -274,7 +275,7 @@ class HomeController extends Controller
             $subcategory_id = Navigation::all()->where('nav_name',$submenu)->first()->id;
             //return Navigation::all()->where('nav_name',$submenu)->first()->page_type;
            if(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="Photo Gallery"){//single gallary
-              $photos = Navigation::query()->where('nav_name','submenu')->latest()->get();
+               $photos = Navigationitems::query()->where('navigation_id',$subcategory_id)->latest()->get();
               return view("website.page_type.gallery")->with(['photos'=>$photos,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
            }
            elseif(Navigation::all()->where('parent_page_id',$subcategory_id)->count()>0){
