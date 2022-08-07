@@ -28,7 +28,7 @@
                             <img src="{{$service->banner_image}}" onerror="this.onerror=null;this.src='/website/images/icon-8.png';">
                         </div><!-- /.service__icon -->
                         <div class="service__content">
-                            <h4 class="service__title">{{$service->captiton}}</h4>
+                            <h4 class="service__title">{{$service->caption}}</h4>
                             <p class="service__desc">{{$service->short_content}}</p>
                         <a href="department.php" class="btn btn-outline">
                             <span>Read More</span>
