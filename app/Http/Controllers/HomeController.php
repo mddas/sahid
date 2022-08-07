@@ -11,7 +11,7 @@ use App\Job;
 class HomeController extends Controller
 {
     public function index(){
-        $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Service')->where('page_type','!=','News & Events')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
+        $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','News & Events')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
         //return $menus;
         //return $menus->first()->submenus;
 

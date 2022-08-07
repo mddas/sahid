@@ -30,7 +30,7 @@
                         <div class="service__content">
                             <h4 class="service__title">{{$service->caption}}</h4>
                             <p class="service__desc">{{$service->short_content}}</p>
-                        <a href="department.php" class="btn btn-outline">
+                        <a href="#" class="btn btn-outline">
                             <span>Read More</span>
                             <i class="fa fa-arrow-right"></i>
                         </a>
