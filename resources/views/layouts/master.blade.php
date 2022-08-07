@@ -48,9 +48,9 @@
     <!-------gallery css---->
     	<link rel="stylesheet" href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
 		<!-- Main style sheet -->
-		<link rel="stylesheet" type="text/css" href="/website/css/style_gallery.css">
+		<!-- <link rel="stylesheet" type="text/css" href="/website/css/style_gallery.css"> -->
 		<!-- responsive style sheet -->
-		<link rel="stylesheet" type="text/css" href="/website/css/responsive_gallery.css">
+		<!-- <link rel="stylesheet" type="text/css" href="/website/css/responsive_gallery.css"> -->
     
 </head>
 
