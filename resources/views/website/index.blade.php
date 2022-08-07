@@ -8,7 +8,6 @@
         @include("website.ourstatistics")
         @include("website.latestnews")
         @include("website.ourtestimonial")
-        @include("website.sahidcontactdetails")
-        @include("website.sahidteam")        
+        @include("website.sahidcontactdetails") 
     @endsection   
  
