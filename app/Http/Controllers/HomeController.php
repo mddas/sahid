@@ -27,7 +27,7 @@ class HomeController extends Controller
         //latest news
          if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%news%")->where('page_type','Group')->latest()->first()!=null){
             $news_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%news%")->where('page_type','Group')->latest()->first()->id;
-            $news = Navigation::query()->where('parent_page_id',$news_id)->latest()->first();
+            $news = Navigation::query()->where('parent_page_id',$news_id)->latest()->get();
         }
         else{
             $news = null;
@@ -87,6 +87,7 @@ class HomeController extends Controller
         else{
             $message = null;
         }  
+        //return $news;
    
         $global_setting = GlobalSetting::all()->first(); 
         return view("website.index")->with(['testimonial'=>$testimonial,'statistics'=>$statistics,'services'=>$services,'specilists'=>$specilists,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
