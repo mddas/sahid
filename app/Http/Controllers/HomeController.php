@@ -51,10 +51,10 @@ class HomeController extends Controller
             //our Testimonials
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%testimonial%")->where('page_type','Group')->latest()->first()!=null){
             $testimonial_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%testimonial%")->where('page_type','Group')->latest()->first()->id;
-            $testimonials = Navigation::query()->where('parent_page_id',$testimonial_id)->latest()->get();
+            $testimonial = Navigation::query()->where('parent_page_id',$testimonial_id)->latest()->get();
         }
         else{
-            $testimonials = null;
+            $testimonial = null;
         }
         //End home
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%about%")->where('page_type','Group')->latest()->first()!=null){
