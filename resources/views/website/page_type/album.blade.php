@@ -33,10 +33,10 @@
                 <div class="col-xl-3 col-md-6 col-sm-12">
                     <div class="box">
                         <figure>
-                            <a href=""><img src="/website/images/team-1.png" alt="" width="800" height="800"></a>
+                            <a href=""><img src="{{$albumb->banner_image}}" alt="" width="800" height="800"></a>
                         </figure>
-                        <h4><a href="#">Ram Babu Adhikari</a></h4>
-                        <span>ICU Expert</span>
+                        <h4><a href="#">{{$albumb->caption}}</a></h4>
+                        <span>{{$albumb->long_content}}</span>
                     </div>
                 </div>
              @endforeach
