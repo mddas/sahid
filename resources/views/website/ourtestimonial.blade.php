@@ -13,7 +13,7 @@
                                 <p>{{$test->short_content}}</p>
                                 <div class="testimonial_author">
                                     <div class="author_image">
-                                        <img src="{{$testimonial->banner_image}}" alt="author image">
+                                        <img src="{{$test->banner_image}}" alt="author image">
                                     </div>
                                     <h5>{{$test->nav_name}}</h5>
                                     <p>{{$test->caption}}</p>
