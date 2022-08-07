@@ -42,7 +42,7 @@ class HomeController extends Controller
         }
         //our statistics
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%statistic%")->where('page_type','Group')->latest()->first()!=null){
-            $statistic_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%statistics%")->where('page_type','Group')->latest()->first()->id;
+            $statistic_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%statistic%")->where('page_type','Group')->latest()->first()->id;
             $statistics = Navigation::query()->where('parent_page_id',$statistic_id)->latest()->get();
         }
         else{
