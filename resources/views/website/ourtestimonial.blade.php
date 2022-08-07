@@ -5,18 +5,18 @@
         <div class="row">
             <div class="col-lg-8 col-md-6 col-sm-12">
                 <div class="owl-carousel owl-theme testimonial_slider">
-                    @if(isset($testimonials))
+                    @if(isset($testimonial))
                     <!----start----->
-                      @foreach($testimonial as $testimonials)
+                      @foreach($testimonial as $test)
                         <div class="item">
                             <div class="testimonial_inner">
-                                <p>{{$testimonial->short_content}}</p>
+                                <p>{{$test->short_content}}</p>
                                 <div class="testimonial_author">
                                     <div class="author_image">
                                         <img src="{{$testimonial->banner_image}}" alt="author image">
                                     </div>
-                                    <h5>{{$testimonial->nav_name}}</h5>
-                                    <p>{{$testimonial->caption}}</p>
+                                    <h5>{{$test->nav_name}}</h5>
+                                    <p>{{$test->caption}}</p>
                                 </div>
                                 <i class="fas fa-quote-left"></i>
                             </div>
