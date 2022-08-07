@@ -25,7 +25,7 @@
 				<div class="department-detail">
 					<h2 id="introduction">{{$normal->caption}}</h2>
 					<p>@php echo $normal->long_content ; @endphp</p>
-					<img src="images/about.png">		       
+					<img src="{{$normal->banner_image}}">		       
 				</div>
 			</div>
 		</div>
