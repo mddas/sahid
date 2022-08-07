@@ -175,7 +175,7 @@ class HomeController extends Controller
         else{
             $category_type = null;
         }
-        
+
         if($category_type == "Photo Gallery"){//albums
             //return "return to page gallary";
             $albumbs = Navigation::query()->where('parent_page_id',$category_id)->where('page_status','1')->where('page_type','Photo Gallery')->latest()->get();
@@ -184,7 +184,6 @@ class HomeController extends Controller
         if($category_type == "News & Events"){
             //return "return to page gallary";
             $newsevents = Navigation::query()->where('parent_page_id',$category_id)->where('page_status','1')->latest()->get();
-            return $newsevents;
             return view("website.page_type.news-event")->with(['slug1'=>$menu,'newsevents'=>$newsevents,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
         }
         elseif($category_type == "Service"){
