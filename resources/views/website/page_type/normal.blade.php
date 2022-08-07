@@ -24,7 +24,7 @@
 			<div class="col-lg-12">
 				<div class="department-detail">
 					<h2 id="introduction">{{$normal->caption}}</h2>
-					<p>{{$normal->long_content}}</p>
+					<p>@php echo $normal->long_content ; @endphp</p>
 					<img src="images/about.png">		       
 				</div>
 			</div>
