@@ -36,6 +36,7 @@ class HomeController extends Controller
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()!=null){
             $specilist_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()->id;
             $specilists = Navigation::query()->where('parent_page_id',$specilist_id)->latest()->get();
+
         }
         else{
             $specilists = null;
@@ -88,7 +89,6 @@ class HomeController extends Controller
         }  
    
         $global_setting = GlobalSetting::all()->first(); 
-       
         return view("website.index")->with(['testimonial'=>$testimonial,'statistics'=>$statistics,'services'=>$services,'specilists'=>$specilists,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
     }
     public function category($menu){
