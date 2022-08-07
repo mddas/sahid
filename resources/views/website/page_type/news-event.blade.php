@@ -28,7 +28,7 @@
                             <a href="newsdetails">
                                 <div class="box" style="background-image: url({{$newevent->banner_image}})">
                                     <div class="box-overlay">
-                                        <h3>{{$newevent->caption}}</h3>
+                                        <h3>{{$newevent->caption}}fghfgh</h3>
                                     </div>
                                 </div>
                             </a>
