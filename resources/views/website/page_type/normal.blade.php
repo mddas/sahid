@@ -55,7 +55,7 @@
                   </ul>
                 </div><!-- /.widget-content -->
               </div><!-- /.widget-services -->
-              <div class="widget widget-help bg-overlay bg-img" style="background: url(images/5.jpg) center center; background-size: cover;">
+              <div class="widget widget-help bg-overlay bg-img" style="background: url(/website/images/5.jpg) center center; background-size: cover;">
                 <div class="widget-content">
                   <div class="widget__icon">
                     <i class="icon-call3"></i>
