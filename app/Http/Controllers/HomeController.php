@@ -154,7 +154,6 @@ class HomeController extends Controller
         }
         $slug_detail = Navigation::all()->where('nav_name',$menu);
         $childs = $slug_detail->first()->childs;
-        return $childs;
         //
         if(Navigation::all()->where('nav_name',$menu)->count()>0){
                     //$normal_notice_page = Navigation::all()->where('nav_name',$slug)->first();
@@ -200,7 +199,7 @@ class HomeController extends Controller
         else{
             if($jobs!=null){        
                  return "contact with admin";    
-                 return view("website.job-list")->with(['slug1'=>$menu,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
+                 return view("website.job-list")->with(['childs'=>$childs,'slug1'=>$menu,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
             }
             else{
                 return redirect('/');
