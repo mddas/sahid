@@ -23,8 +23,8 @@
 		<div class="row">
 			<div class="col-lg-8">
 				<div class="department-detail">
-					<h2>Neurology Department</h2>
-					<p>Department of Neurology has aim of providing the best medical care in the evaluation and management of patients with various neurological disorders. It also aims to uplift the academic excellence in the field of Neurology.</p>
+					<h2>{{$normal->caption}}</h2>
+					<p>@php echo $normal->long_content; @endphp</p>
 
 					<img src="/website/images/2.jpg" alt="banner">
 					<ul class="list-items list-items-layout4 list-horizontal list-unstyled">
