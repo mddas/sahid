@@ -153,7 +153,7 @@ class HomeController extends Controller
             $jobs = null;
         }
         $slug_detail = Navigation::all()->where('nav_name',$menu);
-        $childs = $slug_detail->child;
+        $childs = $slug_detail->childs;
         return $childs;
         //
         if(Navigation::all()->where('nav_name',$menu)->count()>0){
