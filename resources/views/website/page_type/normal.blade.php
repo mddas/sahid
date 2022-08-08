@@ -21,7 +21,7 @@
     <section class="department-page">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="@if($childs->count()>0) col-lg-8 @else col-lg-8 @endif">
 				<div class="department-detail">
 					<h2>{{$normal->caption}}</h2>
 					<p>@php echo $normal->long_content; @endphp</p>
