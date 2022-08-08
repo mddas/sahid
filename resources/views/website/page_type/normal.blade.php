@@ -25,33 +25,18 @@
 				<div class="department-detail">
 					<h2>{{$normal->caption}}</h2>
 					<p>@php echo $normal->long_content; @endphp</p>
-
-					<img src="/website/images/2.jpg" alt="banner">
-					<ul class="list-items list-items-layout4 list-horizontal list-unstyled">
-		              <li>Computed tomography (CT) or (CAT) scans</li>
-		              <li>Seizure disorders, such as epilepsy</li>
-		              <li>Magnetic resonance imaging (MRI)</li>
-		              <li>Speech and language disorders</li>
-		              <li>Electroencephalography (EEG)</li>
-		              <li>Spinal cord disorders</li>
-		              <li>Nerve conduction studies</li>
-		            </ul>
-
-		            <p>Department of Neurology has aim of providing the best medical care in the evaluation and management of patients with various neurological disorders. It also aims to uplift the academic excellence in the field of Neurology.</p>
 				</div>
 			</div>
+      @if($childs->count()>0)
 			<div class="col-lg-4">
 			<aside class="sidebar has-marign-left sticky-top">
               <div class="widget widget-services">
-                <h5 class="widget__title">Medical Department</h5>
+                <h5 class="widget__title">{{$slug_detail->caption ?? $slug1}}</h5>
                 <div class="widget-content">
                   <ul class="list-unstyled mb-0">
-                    <li><a href="#" class="active"><span>Neurology Department</span><i class="fa fa-arrow-right"></i></a></li>
-                    <li><a href="#"><span>Cardiology Department</span><i class="fa fa-arrow-right"></i></a></li>
-                    <li><a href="#"><span>Pathology Department</span><i class="fa fa-arrow-right"></i></a></li>
-                    <li><a href="#"><span>Laboratory Department</span><i class="fa fa-arrow-right"></i></a></li>
-                    <li><a href="#"><span>Pediatric Department</span><i class="fa fa-arrow-right"></i></a></li>
-                    <li><a href="#"><span>Cardiac Department</span><i class="fa fa-arrow-right"></i></a></li>
+                    @foreach($childs as $child)
+                      <li><a href="#" class="active"><span>Neurology Department</span><i class="fa fa-arrow-right"></i></a></li>
+                    @endforeach
                   </ul>
                 </div><!-- /.widget-content -->
               </div><!-- /.widget-services -->
@@ -71,6 +56,7 @@
               </div>
             </aside>
 			</div>
+      @endif
 		</div>
 	</div>
 </section>
