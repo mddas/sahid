@@ -154,7 +154,7 @@ class HomeController extends Controller
         }
         $slug_detail = Navigation::all()->where('nav_name',$menu);
         $childs = $slug_detail->child;
-        return $childs
+        return $childs;
         //
         if(Navigation::all()->where('nav_name',$menu)->count()>0){
                     //$normal_notice_page = Navigation::all()->where('nav_name',$slug)->first();
