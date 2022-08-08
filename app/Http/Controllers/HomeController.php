@@ -194,7 +194,7 @@ class HomeController extends Controller
         elseif($category_type == "Normal"){
             //return $category_id;
             $normal = Navigation::find($category_id);
-            return view("website.page_type.normal")->with(['slug1'=>$menu,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
+            return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$menu,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
         }
         else{
             if($jobs!=null){        
