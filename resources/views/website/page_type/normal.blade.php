@@ -18,107 +18,61 @@
       </div><!-- /.container -->
     </section>
 <!----full page---->
-    <section class="sahid-services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-item">
-                    <div class="service__icon">
-                        <img src="images/icon-8.png" alt=""/>
-                        <img src="images/icon-8.png" alt=""/>
-                    </div><!-- /.service__icon -->
-                    <div class="service__content">
-                        <h4 class="service__title">Neurology Department</h4>
-                        <p class="service__desc">The Neurology department specialises in the diagnosis and treatment of disorders of the nervous system – including the brain, spinal cord, peripheral nerves and muscles.</p>
-                      <a href="department.php" class="btn btn-outline">
-                          <span>Read More</span>
-                          <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div><!-- /.service__content -->
-                </div>
-            </div>
-        </div>
-    </div>
+    <section class="department-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="department-detail">
+					<h2>Neurology Department</h2>
+					<p>Department of Neurology has aim of providing the best medical care in the evaluation and management of patients with various neurological disorders. It also aims to uplift the academic excellence in the field of Neurology.</p>
+
+					<img src="images/2.jpg" alt="banner">
+					<ul class="list-items list-items-layout4 list-horizontal list-unstyled">
+		              <li>Computed tomography (CT) or (CAT) scans</li>
+		              <li>Seizure disorders, such as epilepsy</li>
+		              <li>Magnetic resonance imaging (MRI)</li>
+		              <li>Speech and language disorders</li>
+		              <li>Electroencephalography (EEG)</li>
+		              <li>Spinal cord disorders</li>
+		              <li>Nerve conduction studies</li>
+		            </ul>
+
+		            <p>Department of Neurology has aim of providing the best medical care in the evaluation and management of patients with various neurological disorders. It also aims to uplift the academic excellence in the field of Neurology.</p>
+				</div>
+			</div>
+			<div class="col-lg-4">
+			<aside class="sidebar has-marign-left sticky-top">
+              <div class="widget widget-services">
+                <h5 class="widget__title">Medical Department</h5>
+                <div class="widget-content">
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="active"><span>Neurology Department</span><i class="fa fa-arrow-right"></i></a></li>
+                    <li><a href="#"><span>Cardiology Department</span><i class="fa fa-arrow-right"></i></a></li>
+                    <li><a href="#"><span>Pathology Department</span><i class="fa fa-arrow-right"></i></a></li>
+                    <li><a href="#"><span>Laboratory Department</span><i class="fa fa-arrow-right"></i></a></li>
+                    <li><a href="#"><span>Pediatric Department</span><i class="fa fa-arrow-right"></i></a></li>
+                    <li><a href="#"><span>Cardiac Department</span><i class="fa fa-arrow-right"></i></a></li>
+                  </ul>
+                </div><!-- /.widget-content -->
+              </div><!-- /.widget-services -->
+              <div class="widget widget-help bg-overlay bg-img" style="background: url(images/5.jpg) center center; background-size: cover;">
+                <div class="widget-content">
+                  <div class="widget__icon">
+                    <i class="icon-call3"></i>
+                  </div>
+                  <h4 class="widget__title">Emergency Cases</h4>
+                  <p class="widget__desc">Please feel welcome to contact our friendly reception staff with any general
+                    or medical enquiry call us.
+                  </p>
+                  <a href="tel:015218921" class="phone__number">
+                    <i class="icon-phone fa fa-phone"></i> <span>+977-01-5218921</span>
+                  </a>
+                </div><!-- /.widget-content -->
+              </div>
+            </aside>
+			</div>
+		</div>
+	</div>
 </section>
 
 @endsection
