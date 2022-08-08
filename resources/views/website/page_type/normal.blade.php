@@ -26,7 +26,7 @@
 					<h2>Neurology Department</h2>
 					<p>Department of Neurology has aim of providing the best medical care in the evaluation and management of patients with various neurological disorders. It also aims to uplift the academic excellence in the field of Neurology.</p>
 
-					<img src="images/2.jpg" alt="banner">
+					<img src="/website/images/2.jpg" alt="banner">
 					<ul class="list-items list-items-layout4 list-horizontal list-unstyled">
 		              <li>Computed tomography (CT) or (CAT) scans</li>
 		              <li>Seizure disorders, such as epilepsy</li>
