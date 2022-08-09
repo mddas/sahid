@@ -35,12 +35,12 @@
                 <div class="widget-content">
                   <ul class="list-unstyled mb-0">
                     @foreach($childs as $child)
-                      <li><a href="#" class="active"><span>Neurology Department</span><i class="fa fa-arrow-right"></i></a></li>
+                      <li><a href="/{{$slug1}}/{{$child->nav_name}}" class="active"><span>{{$child->caption}}</span><i class="fa fa-arrow-right"></i></a></li>
                     @endforeach
                   </ul>
                 </div><!-- /.widget-content -->
               </div><!-- /.widget-services -->
-              <div class="widget widget-help bg-overlay bg-img" style="background: url(/website/images/5.jpg) center center; background-size: cover;">
+              <!-- <div class="widget widget-help bg-overlay bg-img" style="background: url(/website/images/5.jpg) center center; background-size: cover;">
                 <div class="widget-content">
                   <div class="widget__icon">
                     <i class="icon-call3"></i>
@@ -52,8 +52,8 @@
                   <a href="tel:015218921" class="phone__number">
                     <i class="icon-phone fa fa-phone"></i> <span>+977-01-5218921</span>
                   </a>
-                </div><!-- /.widget-content -->
-              </div>
+                </div>
+              </div> -->
             </aside>
 			</div>
       @endif

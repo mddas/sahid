@@ -269,21 +269,29 @@ class HomeController extends Controller
             $jobs = null;
         }
         $slug_detail = Navigation::all()->where('nav_name',$submenu)->first();
+        $child = Navigation::all()->where('nav_name',$slug1)->first();
+        $childs = $child->childs;
+        //return $childs;
         //
         if(Navigation::all()->where('nav_name',$submenu)->count()>0){
             
-            $subcategory_id = Navigation::all()->where('nav_name',$submenu)->first()->id;
+            $subcategory_id = Navigation::all()->where('nav_name',$slug1)->first()->id;
             //return Navigation::all()->where('nav_name',$submenu)->first()->page_type;
            if(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="Photo Gallery"){//single gallary
                $photos = Navigationitems::query()->where('navigation_id',$subcategory_id)->latest()->get();
               return view("website.page_type.gallery")->with(['slug1'=>$slug1,'photos'=>$photos,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+           }
+           elseif(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="Service"){//sub single service
+               $normal = Navigation::where('nav_name',$submenu)->first();
+               return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$slug1,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
            }
            elseif(Navigation::all()->where('parent_page_id',$subcategory_id)->count()>0){
                 $subcategory_type = Navigation::all()->where('parent_page_id',$subcategory_id)->first()->page_type;//slug/slug2(GROUP)
             }
             else{
                 //return Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->first()->page_type;
-                if(Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->count()>0){
+                if(Navigation::all()->where('nav_name',$submenu)->where('page_type','Service')->count()>0){
+                    return "please contact with admin";
                     $subcategory_type = Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->first()->page_type;//slug/slug2(group)
                 }
                 else{
@@ -295,7 +303,7 @@ class HomeController extends Controller
         else{
              $subcategory_type = null;
          }
-         //return $subcategory_type;
+
          
         if($subcategory_type == "Photo Gallery"){//Albumb 
             $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
