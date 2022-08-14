@@ -80,7 +80,9 @@
                                         <ul>
 
                                             @foreach($menu->childs as $submenu)
-                                                <li><a href="{{route('subcategory',[$menu->nav_name,$submenu->nav_name])}}">{{$submenu->caption}}</a></li>
+                                                @if($submenu->page_type != "Service" || $menu->nav_name=="department" )
+                                                    <li><a href="{{route('subcategory',[$menu->nav_name,$submenu->nav_name])}}">{{$submenu->caption}}</a></li>
+                                                @endif
                                             @endforeach
                                         </ul>
                                          

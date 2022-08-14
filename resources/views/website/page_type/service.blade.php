@@ -4,11 +4,11 @@
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-between flex-wrap align-items-center">
-            <h1 class="pagetitle__heading my-3">Our Services</h1>
+            <h1 class="pagetitle__heading my-3">{{$slug_detail->nav_name ?? $slug1}}</h1>
             <nav>
               <ol class="breadcrumb my-3">
-                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                <li class="breadcrumb-item">Services</li>
+                <li class="breadcrumb-item"><a href="#">{{$slug1}}</a></li>
+                <li class="breadcrumb-item">{{$slug_detail->nav_name ?? ''}}</li>
               </ol>
             </nav>
           </div><!-- /.col-12 -->
@@ -30,7 +30,7 @@
                         <div class="service__content">
                             <h4 class="service__title">{{$service->caption}}</h4>
                             <p class="service__desc">{{$service->short_content}}</p>
-                        <a href="#" class="btn btn-outline">
+                        <a href="/{{$slug1}}/{{$service->nav_name}}" class="btn btn-outline">
                             <span>Read More</span>
                             <i class="fa fa-arrow-right"></i>
                         </a>
