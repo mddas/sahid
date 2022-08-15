@@ -28,19 +28,84 @@
             </div>
         </div>
         <div class="row">
-            <!-----start---->
-             @foreach($albumbs as $albumb)
-                <div class="col-xl-3 col-md-6 col-sm-12">
-                    <div class="box">
-                        <figure>
-                            <a href=""><img src="{{$albumb->banner_image}}" alt="" width="800" height="800"></a>
-                        </figure>
-                        <h4><a href="#">{{$albumb->caption}}</a></h4>
-                        <span>{{$albumb->long_content}}</span>
-                    </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="box">
+                    <figure>
+                        <a href=""><img src="/website/images/team-1.png" alt="" width="800" height="800"></a>
+                    </figure>
+                    <h4><a href="#">Ram Babu Adhikari</a></h4>
+                    <span>ICU Expert</span>
                 </div>
-             @endforeach
-           <!---------Albumb--------->
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="box">
+                    <figure>
+                        <a href=""><img src="/website/images/team-2.png" alt="" width="800" height="800"></a>
+                    </figure>
+                    <h4><a href="#">Ram Babu Adhikari</a></h4>
+                    <span>ICU Expert</span>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="box">
+                    <figure>
+                        <a href=""><img src="/website/images/team-3.png" alt="" width="800" height="800"></a>
+                    </figure>
+                    <h4><a href="#">Ram Babu Adhikari</a></h4>
+                    <span>ICU Expert</span>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="box">
+                    <figure>
+                        <a href=""><img src="/website/images/team-4.png" alt="" width="800" height="800"></a>
+                    </figure>
+                    <h4><a href="#">Ram Babu Adhikari</a></h4>
+                    <span>ICU Expert</span>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="box">
+                    <figure>
+                        <a href=""><img src="/website/images/team-1.png" alt="" width="800" height="800"></a>
+                    </figure>
+                    <h4><a href="#">Ram Babu Adhikari</a></h4>
+                    <span>ICU Expert</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="box">
+                    <figure>
+                        <a href=""><img src="/website/images/team-2.png" alt="" width="800" height="800"></a>
+                    </figure>
+                    <h4><a href="#">Ram Babu Adhikari</a></h4>
+                    <span>ICU Expert</span>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="box">
+                    <figure>
+                        <a href=""><img src="/website/images/team-3.png" alt="" width="800" height="800"></a>
+                    </figure>
+                    <h4><a href="#">Ram Babu Adhikari</a></h4>
+                    <span>ICU Expert</span>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="box">
+                    <figure>
+                        <a href=""><img src="/website/images/team-4.png" alt="" width="800" height="800"></a>
+                    </figure>
+                    <h4><a href="#">Ram Babu Adhikari</a></h4>
+                    <span>ICU Expert</span>
+
+                </div>
+            </div>
         </div>
     </div>
 </section>
