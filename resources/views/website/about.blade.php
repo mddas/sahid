@@ -13,7 +13,7 @@
                 <p>
                    {{$about->short_content ?? ''}}
                 </p>
-                <a href="#" class="btn btn_link--transparent">Learn More</a>
+                <a href="/about" class="btn btn_link--transparent">Learn More</a>
             </div>
         </div>
     </div>
