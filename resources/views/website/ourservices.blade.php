@@ -22,7 +22,7 @@
                 <!-----end service--->
             @endif
             <div class="col-lg-12 col-md-12 mt-5 text-center">
-                <a class="btn btn_link" href="#">Know More</a>
+                <a class="btn btn_link" href="/Services">Know More</a>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@
 		<div class="row">
 			<div class="@if($childs->count()>0) col-lg-8 @else col-lg-12 @endif">
 				<div class="department-detail">
-					<h2>{{$normal->caption}}</h2>
+					<h2>{{$normal->caption}}</h2>z
 					<p>@php echo $normal->long_content; @endphp</p>
 				</div>
 			</div>
