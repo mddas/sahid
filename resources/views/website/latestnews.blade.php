@@ -14,7 +14,7 @@
              @foreach($news as $new)
                 <div class="item">
                     <div class="outer-box">
-                        <a href="newsdetails">
+                        <a href="/read-more/{{$new->nav_name}}">
                             <div class="box" style="background-image: url({{$new->banner_image}})">
                                 <div class="box-overlay">
                                     <h3>{{$new->caption}}</h3>

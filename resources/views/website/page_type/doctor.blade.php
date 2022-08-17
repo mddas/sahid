@@ -2,6 +2,7 @@
 @section("content")
 
 
+
 <section class="page-title page-title-layout5 bg-img" style="background-image: url(/website/images/6.jpg) !important; background-size: cover; background-position: center center; padding-top: 120px;">
       <div class="container">
         <div class="row">
@@ -18,26 +19,32 @@
       </div><!-- /.container -->
     </section>
 
-<section class="latest_news news-page">
-	<div class="container">
-		<div class="row">
-            <!-----start---->
-            @foreach($newsevents as $newevent)
-                <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="outer-box">
-                            <a href="/{{$slug1}}/{{$newevent->nav_name}}">
-                                <div class="box" style="background-image: url({{$newevent->banner_image}})">
-                                    <div class="box-overlay">
-                                        <h3>{{$newevent->caption}}</h3>
-                                    </div>
-                                </div>
-                            </a>
+<section class="sahid-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12  col-sm-12">
+
+                <h2 class="section-title text-center">Our Specilists</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            <!----start----->
+            @foreach($doctors as $doctor)
+                <div class="col-xl-3 col-md-6 col-sm-12">
+                    <div class="box">
+                        <figure>
+                            <a href=""><img src="{{$doctor->banner_image}}" alt="" width="800" height="800"></a>
+                        </figure>
+                        <h4><a href="#">{{$doctor->caption}}</a></h4>
+                        <span>ICU Expert</span>
                     </div>
                 </div>
             @endforeach
-          <!------end---->
-		</div>
-	</div>
+            <!----end---->
+        </div>
+    </div>
 </section>
+
 
 @endsection

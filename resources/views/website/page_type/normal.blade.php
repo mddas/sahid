@@ -21,13 +21,13 @@
     <section class="department-page">
 	<div class="container">
 		<div class="row">
-			<div class="@if($childs->count()>0) col-lg-8 @else col-lg-12 @endif">
+			<div class="@if(isset($childs) && $childs->count()>0) col-lg-8 @else col-lg-12 @endif">
 				<div class="department-detail">
-					<h2>{{$normal->caption}}</h2>z
+					<h2>{{$normal->caption}}</h2>
 					<p>@php echo $normal->long_content; @endphp</p>
 				</div>
 			</div>
-      @if($childs->count()>0)
+      @if(isset($childs) && $childs->count()>0)
 			<div class="col-lg-4">
 			<aside class="sidebar has-marign-left sticky-top">
               <div class="widget widget-services">
