@@ -37,7 +37,7 @@
                     <span class="call-us wow fadeInUp" data-wow-delay="0.3s"
                           style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"><i
                                 class="fas fa-phone-volume"></i><div class="contact_info_detail">
-                                <h4>Our Location</h4>
+                                <h4>Our Contact</h4>
                                 <span><a href="#">977-01-5218921, 5219934, 5219935</a></span>
                             </div></span>
                     <span class="call-us wow fadeInUp" data-wow-delay="0.5s"
