@@ -98,7 +98,7 @@ Route::prefix('admin')->group(function(){
 Route::get('view-all',[HomeController::class,"viewAll"])->name('viewall');
 Route::get('read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
 
-Route::POST('jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
+Route::POST('jobapply/store',[ContactController::class,'ContactStore'])->name('storeapply');
 Route::get('/jobdetail/{jobslug}',[HomeController::class,'singlePage'])->name('single_job');
 Route::get('/jobapply/{jobslug}',[ContactController::class,'jobApply'])->name('jobapply');
 Route::get('/contact',[ContactController::class,'Contact'])->name('contact');

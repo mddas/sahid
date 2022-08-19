@@ -51,7 +51,7 @@
 		<!-- <link rel="stylesheet" type="text/css" href="/website/css/style_gallery.css"> -->
 		<!-- responsive style sheet -->
 		<!-- <link rel="stylesheet" type="text/css" href="/website/css/responsive_gallery.css"> -->
-    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
