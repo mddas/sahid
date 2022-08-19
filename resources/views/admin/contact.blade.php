@@ -3,7 +3,7 @@
 
 
 @extends('layouts.master')
-    @section("contents")
+    @section("content")
        
 			<!--
 			=====================================================
