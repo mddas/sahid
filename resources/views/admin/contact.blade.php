@@ -64,7 +64,6 @@
 			        </div>
 			    </div> <!-- End of .alert_wrapper -->
 			</div> <!-- /.contact-us-section -->
-        @include("website.partner")
 @endsection
 
 	
