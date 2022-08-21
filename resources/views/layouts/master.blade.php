@@ -1,5 +1,6 @@
 @php
     $global_setting = App\Models\GlobalSetting::all()->first();
+    $services = App\Models\Navigation::query()->where('page_type','Service')->where('page_status','1')->latest()->paginate(8);
     if(isset($normal)){
         $seo = $normal;
     }
@@ -174,9 +175,10 @@
                         <h3 class="widget-title">Contact Us</h3>
                         <div class="textwidget">
                             <ul class="footer-info">
-                                <li>977-01-5218921, 5219934, 5219935</li>
-                                <li>info@sahidhospitalkalanki.com</li>
-                                <li>Kalanki–14, Kathmandu, Nepal</li>
+                                <li>{{$global_setting->phone}}, {{$global_setting->phone_ne}}</li>
+                                <li>{{$global_setting->site_email}}</li>
+                                <li>{{$global_setting->website_full_address}}</li>
+                                <li>{{$global_setting->address_ne}}</li>
                             </ul>
                         </div>
                     </div>
