@@ -154,7 +154,7 @@ class HomeController extends Controller
         }
         $slug_detail = Navigation::all()->where('nav_name',$menu);
         return $slug_detail;
-        if($slug_detail!=null){
+        if($slug_detail->count>0){
             $childs = $slug_detail->first()->childs;
         }
         else{
