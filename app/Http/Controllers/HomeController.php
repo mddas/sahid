@@ -221,7 +221,7 @@ class HomeController extends Controller
     }
 
   public function subcategory($slug1,$submenu){
-        return $menu."::".$submenu;
+        return $slug1."::".$submenu;
         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Service')->where('page_type','!=','News & Events')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
         //return $menus->first()->submenus;
         $jobs = Navigation::query()->where('page_type','Job')->latest()->get();
