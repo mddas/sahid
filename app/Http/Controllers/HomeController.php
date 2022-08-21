@@ -88,8 +88,8 @@ class HomeController extends Controller
             $message = null;
         }  
         //return $news;
-        $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->get();
-        $news = Navigation::query()->where('page_type','News & Events')->where('page_status','1')->latest()->get();
+        $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->paginate(4)->get();
+        $news = Navigation::query()->where('page_type','News & Events')->where('page_status','1')->latest()->paginate(4)->get();
         $global_setting = GlobalSetting::all()->first(); 
         return view("website.index")->with(['testimonial'=>$testimonial,'statistics'=>$statistics,'services'=>$services,'specilists'=>$doctors,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
     }
@@ -296,7 +296,6 @@ class HomeController extends Controller
            }
            elseif(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="News & Events"){//sub single service
                $normal = Navigation::where('nav_name',$submenu)->first();
-               return $normal;
                return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$slug1,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
            }
            elseif(Navigation::all()->where('parent_page_id',$subcategory_id)->count()>0){
