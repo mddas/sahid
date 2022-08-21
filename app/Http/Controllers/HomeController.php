@@ -25,13 +25,13 @@ class HomeController extends Controller
             $services = null;
         }
         //latest news
-         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%news%")->where('page_type','Group')->latest()->first()!=null){
-            $news_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%news%")->where('page_type','Group')->latest()->first()->id;
-            $news = Navigation::query()->where('parent_page_id',$news_id)->latest()->get();
-        }
-        else{
-            $news = null;
-        }
+        //  if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%news%")->where('page_type','Group')->latest()->first()!=null){
+        //     $news_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%news%")->where('page_type','Group')->latest()->first()->id;
+        //     $news = Navigation::query()->where('parent_page_id',$news_id)->latest()->get();
+        // }
+        // else{
+        //     $news = null;
+        // }
         //our specilist
         // if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()!=null){
         //     $specilist_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()->id;
@@ -89,6 +89,7 @@ class HomeController extends Controller
         }  
         //return $news;
         $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->get();
+        $news = Navigation::query()->where('page_type','News & Events')->where('page_status','1')->latest()->get();
         $global_setting = GlobalSetting::all()->first(); 
         return view("website.index")->with(['testimonial'=>$testimonial,'statistics'=>$statistics,'services'=>$services,'specilists'=>$doctors,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
     }
