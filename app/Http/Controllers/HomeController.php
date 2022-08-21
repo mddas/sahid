@@ -33,14 +33,14 @@ class HomeController extends Controller
             $news = null;
         }
         //our specilist
-        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()!=null){
-            $specilist_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()->id;
-            $specilists = Navigation::query()->where('parent_page_id',$specilist_id)->latest()->get();
+        // if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()!=null){
+        //     $specilist_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()->id;
+        //     $specilists = Navigation::query()->where('parent_page_id',$specilist_id)->latest()->get();
 
-        }
-        else{
-            $specilists = null;
-        }
+        // }
+        // else{
+        //     $specilists = null;
+        // }
         //our statistics
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%statistic%")->where('page_type','Group')->latest()->first()!=null){
             $statistic_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%statistic%")->where('page_type','Group')->latest()->first()->id;
@@ -88,9 +88,9 @@ class HomeController extends Controller
             $message = null;
         }  
         //return $news;
-   
+        $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->get();
         $global_setting = GlobalSetting::all()->first(); 
-        return view("website.index")->with(['testimonial'=>$testimonial,'statistics'=>$statistics,'services'=>$services,'specilists'=>$specilists,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
+        return view("website.index")->with(['testimonial'=>$testimonial,'statistics'=>$statistics,'services'=>$services,'specilists'=>$doctors,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
     }
     public function category($menu){
         //return $menu." this is category";
@@ -188,7 +188,8 @@ class HomeController extends Controller
         }
         if($category_type == "Doctor"){
             //return "return to page gallary";
-            $doctors = Navigation::query()->where('parent_page_id',$category_id)->where('page_status','1')->latest()->get();
+            //$doctors = Navigation::query()->where('parent_page_id',$category_id)->where('page_status','1')->latest()->get();            
+            $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->get();
             return view("website.page_type.doctor")->with(['slug1'=>$menu,'doctors'=>$doctors,'menus'=>$menus]);
         }
         elseif($category_type == "Service"){
