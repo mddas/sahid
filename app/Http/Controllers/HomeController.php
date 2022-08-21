@@ -153,6 +153,7 @@ class HomeController extends Controller
             $jobs = null;
         }
         $slug_detail = Navigation::all()->where('nav_name',$menu);
+        return $slug_detail;
         if($slug_detail!=null){
             $childs = $slug_detail->first()->childs;
         }
