@@ -134,13 +134,11 @@
                             <div class="site-branding">
                                 <!-- <a href="#" class="custom-logo-link"><img width="290" height="50" src="images/logo_light.png" class="custom-logo" alt="logo" ></a>-->
                                 <h2 class="site-title">
-                                    Sahid Memorial Hospital
+                                    {{$global_setting->site_name}}
                                 </h2>
 
                             </div>
-                            <p>Making a nation prosperous is possible only through its healthy citizens. The primary
-                                responsibilities of any state include the extension of affordable, reliable and modern
-                                technology based quality health service to the public. </p>
+                            <p>{{$global_setting->page_description}}</p>
                         </div>
                     </div>
                 </div>
@@ -150,13 +148,9 @@
                         <h3 class="widget-title">Services</h3>
                         <div class="menu-useful-links-container">
                             <ul id="menu-useful-links" class="menu">
-                                <li><a href="#">24 hours Emergency</a>
-                                <li><a href="#">Intense Care Unit</a>
-                                <li><a href="#">Operation Theater</a>
-                                <li><a href="#">Medical Counselling</a>
-                                <li><a href="#">Mental Disease</a>
-                                <li><a href="#">Physiotherapy</a>
-
+                                @foreach($services as $service)
+                                    <li><a href="/service">{{$service->caption}}</a>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -167,12 +161,9 @@
                         <div class="menu-useful-links-container">
                             <ul id="menu-useful-links" class="menu">
                                 <li><a href="#">Home</a>
-                                <li><a href="#">About Us</a>
-                                <li><a href="#">Services</a>
-                                <li><a href="#">Gallery</a>
-                                <li><a href="#">Mission & Vission</a>
-                                <li><a href="#">Contact Us</a>
-
+                                @foreach($menus as $menu)
+                                    <li><a href="#">{{$menu->caption}}</a>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
