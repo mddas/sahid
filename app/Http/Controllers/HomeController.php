@@ -310,6 +310,7 @@ class HomeController extends Controller
                 }
                 elseif(Navigation::all()->where('nav_name',$submenu)->where('page_type','News & Events')->count()>0){
                     $subcategory_type = Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->first()->page_type;//slug/newsnotice
+                    return $subcategory_type;
                 }
                 else{
                     return redirect('/');//submenu is page_type=Group and its internal items are empty
