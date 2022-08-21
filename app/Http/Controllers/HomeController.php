@@ -88,8 +88,8 @@ class HomeController extends Controller
             $message = null;
         }  
         //return $news;
-        $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->paginate(4)->get();
-        $news = Navigation::query()->where('page_type','News & Events')->where('page_status','1')->latest()->paginate(4)->get();
+        $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->paginate(8);
+        $news = Navigation::query()->where('page_type','News & Events')->where('page_status','1')->latest()->paginate(8);
         $global_setting = GlobalSetting::all()->first(); 
         return view("website.index")->with(['testimonial'=>$testimonial,'statistics'=>$statistics,'services'=>$services,'specilists'=>$doctors,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
     }
