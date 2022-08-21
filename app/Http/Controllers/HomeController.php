@@ -297,6 +297,7 @@ class HomeController extends Controller
            }
            elseif(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="News & Events"){//sub single service
                $normal = Navigation::where('nav_name',$submenu)->first();
+               return $normal;
                return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$slug1,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
            }
            elseif(Navigation::all()->where('parent_page_id',$subcategory_id)->count()>0){
@@ -308,10 +309,6 @@ class HomeController extends Controller
                     return "please contact with admin";
                     $subcategory_type = Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->first()->page_type;//slug/slug2(group)
                 }
-                elseif(Navigation::all()->where('nav_name',$submenu)->where('page_type','News & Events')->count()>0){
-                    $subcategory_type = Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->first()->page_type;//slug/newsnotice
-                    return $subcategory_type;
-                }
                 else{
                     return redirect('/');//submenu is page_type=Group and its internal items are empty
                 }
@@ -322,7 +319,6 @@ class HomeController extends Controller
              $subcategory_type = null;
          }
 
-         
         if($subcategory_type == "Photo Gallery"){//Albumb 
             $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
             return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
