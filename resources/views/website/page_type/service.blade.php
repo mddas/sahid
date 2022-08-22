@@ -30,10 +30,12 @@
                         <div class="service__content">
                             <h4 class="service__title">{{$service->caption}}</h4>
                             <p class="service__desc">{{$service->short_content}}</p>
-                        <!-- <a href="/{{$slug1}}/{{$service->nav_name}}" class="btn btn-outline">
-                            <span>Read More</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </a> -->
+                         @if($slug1!="Services")
+                            <a href="/{{$slug1}}/{{$service->nav_name}}" class="btn btn-outline">
+                              <span>Read More</span>
+                              <i class="fa fa-arrow-right"></i>
+                            </a>
+                          @endif
                         </div><!-- /.service__content -->
                     </div>
                 </div>
