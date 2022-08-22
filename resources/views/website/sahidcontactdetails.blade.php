@@ -11,13 +11,13 @@
                               style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"><i
                                     class="fas fa-map-marker-alt"></i><div class="contact_info_detail">
                                 <h4>Our Location</h4>
-                                <span><a href="#">{{$global_Setting->website_full_address}}</a></span>
+                                <span><a href="#">{{$global_setting->website_full_address}}</a></span>
                             </div></span>
                     <span class="call-us wow fadeInUp" data-wow-delay="0.3s"
                           style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"><i
                                 class="fas fa-phone-volume"></i><div class="contact_info_detail">
                                 <h4>Call</h4>
-                                <span><a href="#">{{$global_Setting->phone}}, {{$global_Setting->phone_ne}}</a></span>
+                                <span><a href="#">{{$global_setting->phone}}, {{$global_setting->phone_ne}}</a></span>
                             </div></span>
                     <span class="call-us wow fadeInUp" data-wow-delay="0.5s"
                           style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"><i

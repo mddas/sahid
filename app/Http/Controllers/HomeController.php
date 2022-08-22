@@ -281,8 +281,14 @@ class HomeController extends Controller
             $jobs = null;
         }
         $slug_detail = Navigation::all()->where('nav_name',$submenu)->first();
-        $child = Navigation::all()->where('nav_name',$slug1)->first();
-        $childs = $child->childs;
+        if($Navigation::all()->where('nav_name',$slug1)->count()>0){
+            $child = Navigation::all()->where('nav_name',$slug1)->first();
+            $childs = $child->childs;
+        }
+        else {
+            $childs = [];
+        }
+        
         //
         if(Navigation::all()->where('nav_name',$submenu)->count()>0){
             
