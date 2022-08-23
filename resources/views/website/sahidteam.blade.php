@@ -11,14 +11,14 @@
         <div class="row">
             @if(isset($specilists))
             <!-----start specilists------>
-              @foreach($specilists as $specilist)
+              @foreach($doctors as $specilist)
                 <div class="col-xl-3 col-md-6 col-sm-12">
                     <div class="box">
                         <figure>
                             <a href=""><img src="{{$specilist->banner_image}}" alt="" width="800" height="800"></a>
                         </figure>
                         <h4><a href="#">{{$specilist->caption}}</a></h4>
-                        <span>ICU Expert</span>
+                        <span>{{$specilist->short_content}}</span>
                     </div>
                 </div>
              @endforeach
