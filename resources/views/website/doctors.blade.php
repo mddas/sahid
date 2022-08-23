@@ -27,84 +27,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <a href=""><img src="/website/images/team-1.png" alt="" width="800" height="800"></a>
-                    </figure>
-                    <h4><a href="#">Ram Babu Adhikari</a></h4>
-                    <span>ICU Expert</span>
+            @foreach($doctors as  $doctor)
+                <div class="col-xl-3 col-md-6 col-sm-12">
+                    <div class="box">
+                        <figure>
+                            <a href=""><img src="/website/images/team-1.png" alt="" width="800" height="800"></a>
+                        </figure>
+                        <h4><a href="#">{{$doctor->caption}}</a></h4>
+                        <span>{{$doctor->short_content}}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <a href=""><img src="/website/images/team-2.png" alt="" width="800" height="800"></a>
-                    </figure>
-                    <h4><a href="#">Ram Babu Adhikari</a></h4>
-                    <span>ICU Expert</span>
-
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <a href=""><img src="/website/images/team-3.png" alt="" width="800" height="800"></a>
-                    </figure>
-                    <h4><a href="#">Ram Babu Adhikari</a></h4>
-                    <span>ICU Expert</span>
-
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <a href=""><img src="/website/images/team-4.png" alt="" width="800" height="800"></a>
-                    </figure>
-                    <h4><a href="#">Ram Babu Adhikari</a></h4>
-                    <span>ICU Expert</span>
-
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <a href=""><img src="/website/images/team-1.png" alt="" width="800" height="800"></a>
-                    </figure>
-                    <h4><a href="#">Ram Babu Adhikari</a></h4>
-                    <span>ICU Expert</span>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <a href=""><img src="/website/images/team-2.png" alt="" width="800" height="800"></a>
-                    </figure>
-                    <h4><a href="#">Ram Babu Adhikari</a></h4>
-                    <span>ICU Expert</span>
-
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <a href=""><img src="/website/images/team-3.png" alt="" width="800" height="800"></a>
-                    </figure>
-                    <h4><a href="#">Ram Babu Adhikari</a></h4>
-                    <span>ICU Expert</span>
-
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="box">
-                    <figure>
-                        <a href=""><img src="/website/images/team-4.png" alt="" width="800" height="800"></a>
-                    </figure>
-                    <h4><a href="#">Ram Babu Adhikari</a></h4>
-                    <span>ICU Expert</span>
-
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
