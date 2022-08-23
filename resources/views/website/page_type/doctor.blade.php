@@ -39,8 +39,8 @@
                         <figure>
                             <a href=""><img src="{{$doctor->banner_image}}" alt="" width="800" height="800"></a>
                         </figure>
-                        <h4><a href="#">{{$doctor->short_content}}</a></h4>
-                        <span>{{$doctor->caption}}</span>
+                        <h4><a href="#">{{$doctor->caption}}</a></h4>
+                        <span>{{$doctor->short_content}}</span>
                     </div>
                 </div>
             @endforeach
