@@ -9,7 +9,6 @@
             </div>
         </div>
         <div class="row">
-            @if(isset($specilists))
             <!-----start specilists------>
               @foreach($doctors as $specilist)
                 <div class="col-xl-3 col-md-6 col-sm-12">
@@ -23,7 +22,7 @@
                 </div>
              @endforeach
             <!-----stop specilists------->
-            @endif
+
         </div>
     </div>
 </section>
