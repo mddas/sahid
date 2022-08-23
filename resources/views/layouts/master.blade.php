@@ -163,7 +163,7 @@
                             <ul id="menu-useful-links" class="menu">
                                 <li><a href="#">Home</a>
                                 @foreach($menus as $menu)
-                                    <li><a href="#">{{$menu->caption}}</a>
+                                    <li><a href="/{{$menu->nav_name}}">{{$menu->caption}}</a>
                                 @endforeach
                             </ul>
                         </div>
