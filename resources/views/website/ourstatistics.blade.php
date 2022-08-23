@@ -16,8 +16,8 @@
                                 <figure>
                                     <img src="{{$statistic->banner_image}}" alt="" />
                                 </figure>
-                                <div class="numWrapper"><span class="countNum">{{$statistic->caption}}</span>+</div>
-                                <h3>{{$statistic->short_content}}</h3>
+                                <div class="numWrapper"><span class="countNum">{{$statistic->short_content}}</span>+</div>
+                                <h3>{{$statistic->caption}}</h3>
                             </div>
                         </div>
                     @endforeach
