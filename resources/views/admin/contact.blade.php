@@ -81,7 +81,7 @@
                                               placeholder="Message"></textarea>
                                 </span>
                                 </label></p>
-                            <p><input type="submit" value="Apponment" class="wpcf7-form-control wpcf7-submit"><span
+                            <p><input type="submit" value="appointment" class="wpcf7-form-control wpcf7-submit"><span
                                         class="ajax-loader"></span></p>
                         </form>
                     </div>
