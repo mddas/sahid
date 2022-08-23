@@ -281,7 +281,7 @@ class HomeController extends Controller
             $jobs = null;
         }
         $slug_detail = Navigation::all()->where('nav_name',$submenu)->first();
-        if($Navigation::all()->where('nav_name',$slug1)->count()>0){
+        if(Navigation::all()->where('nav_name',$slug1)->count()>0){
             $child = Navigation::all()->where('nav_name',$slug1)->first();
             $childs = $child->childs;
         }
