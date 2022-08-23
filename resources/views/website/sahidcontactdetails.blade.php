@@ -37,7 +37,7 @@
                             @csrf
                             <p><label>
                                 <span class="wpcf7-form-control-wrap your-name">
-                                    <input type="text" name="name" placeholder="Your Name" required>
+                                    <input type="text" name="name" class="wpcf7-form-control wpcf7-text" placeholder="Your Name" required>
                                 </span>
                                 </label>
                             </p>
