@@ -31,7 +31,7 @@
 			<div class="col-lg-4">
 			<aside class="sidebar has-marign-left sticky-top">
               <div class="widget widget-services">
-                <h5 class="widget__title">{{$slug_detail->caption ?? $slug1}}</h5>
+                <h5 class="widget__title">@if($slug1=="department") Our Department @else {{$slug_detail->caption ?? $slug1}} @endif</h5>
                 <div class="widget-content">
                   <ul class="list-unstyled mb-0">
                     @foreach($childs as $child)
