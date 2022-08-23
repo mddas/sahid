@@ -18,7 +18,7 @@
       </div><!-- /.container -->
     </section>
 <!----full page---->
-    <section class="department-page">
+<section class="department-page">
 	<div class="container">
 		<div class="row">
 			<div class="@if(isset($childs) && $childs->count()>0) col-lg-8 @else col-lg-12 @endif">
@@ -31,7 +31,7 @@
 			<div class="col-lg-4">
 			<aside class="sidebar has-marign-left sticky-top">
               <div class="widget widget-services">
-                <h5 class="widget__title">@if($slug1=="department") Our Department @else {{$slug_detail->caption ?? $slug1}} @endif</h5>
+                <h5 class="widget__title">@if($slug1=="department") Our Department @elseif($slug1=="news-event") Latest News & Events @else {{$slug_detail->caption ?? $slug1}} @endif</h5>
                 <div class="widget-content">
                   <ul class="list-unstyled mb-0">
                     @foreach($childs as $child)
