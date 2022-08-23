@@ -11,7 +11,9 @@
               <ol class="breadcrumb my-3">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item"><a href="/{{$slug1}}">{{$slug1}}</a></li>
-                <li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
+                @if(isset($slug_detail))
+                  <li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
+                @endphp
               </ol>
             </nav>
           </div><!-- /.col-12 -->
