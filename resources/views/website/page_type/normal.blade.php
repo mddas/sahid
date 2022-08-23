@@ -13,7 +13,7 @@
                 <li class="breadcrumb-item"><a href="/{{$slug1}}">{{$slug1}}</a></li>
                 @if(isset($slug_detail))
                   <li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
-                @endphp
+                @endif
               </ol>
             </nav>
           </div><!-- /.col-12 -->
