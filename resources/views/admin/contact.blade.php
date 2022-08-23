@@ -32,19 +32,19 @@
                               style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"><i
                                     class="fas fa-map-marker-alt"></i><div class="contact_info_detail">
                                 <h4>Our Location</h4>
-                                <span><a href="#">Kalanki–14, Kathmandu, Nepal</a></span>
+                                <span><a href="#">{{$global_setting->website_full_address}}</a></span>
                             </div></span>
                     <span class="call-us wow fadeInUp" data-wow-delay="0.3s"
                           style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"><i
                                 class="fas fa-phone-volume"></i><div class="contact_info_detail">
                                 <h4>Our Contact</h4>
-                                <span><a href="#">977-01-5218921, 5219934, 5219935</a></span>
+                                <span><a href="#">{{$global_setting->phone}}, {{$global_setting->phone_ne}}</a></span>
                             </div></span>
                     <span class="call-us wow fadeInUp" data-wow-delay="0.5s"
                           style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"><i
                                 class="fas fa-envelope"></i><div class="contact_info_detail">
                                 <h4>Email</h4>
-                                <span><a href="#">info@sahidhospitalkalanki.com</a></span>
+                                <span><a href="#">{{$global_setting->site_email}}</a></span>
                             </div></span>
 
                 </div>

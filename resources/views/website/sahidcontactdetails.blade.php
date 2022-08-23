@@ -23,7 +23,7 @@
                           style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"><i
                                 class="fas fa-envelope"></i><div class="contact_info_detail">
                                 <h4>Email</h4>
-                                <span><a href="#">info@sahidhospitalkalanki.com</a></span>
+                                <span><a href="#">{{$global_setting->site_email}}</a></span>
                             </div></span>
 
                 </div>
@@ -33,38 +33,31 @@
                     <div role="form" class="wpcf7" id="wpcf7-f59-o1" lang="en-US" dir="ltr">
                         <div class="screen-reader-response"></div>
                         <h3 class="section-title text-center">Make An Appointment</h3>
-                        <form action="" method="get" class="wpcf7-form" novalidate="novalidate">
-                            <div style="display: none;">
-                                <input type="hidden" name="_wpcf7" value="59">
-                                <input type="hidden" name="_wpcf7_version" value="5.1.1">
-                                <input type="hidden" name="_wpcf7_locale" value="en_US">
-                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f59-o1">
-                                <input type="hidden" name="_wpcf7_container_post" value="0">
-                                <input type="hidden" name="g-recaptcha-response" value="">
-                            </div>
+                        <form action="{{route('storeapply')}}" method="POST" class="theme-form-one form-validation" autocomplete="on" enctype='multipart/form-data' class="wpcf7-form" novalidate="novalidate">
+                            @csrf
                             <p><label>
                                 <span class="wpcf7-form-control-wrap your-name">
-                                    <input type="text" class="wpcf7-form-control wpcf7-text" placeholder="Your Name">
+                                    <input type="text" name="name" class="wpcf7-form-control wpcf7-text" placeholder="Your Name" required>
                                 </span>
                                 </label>
                             </p>
                             <p><label>
                                 <span class="wpcf7-form-control-wrap your-email">
-                                    <input type="email" name="your-email" class="wpcf7-form-control wpcf7-text"
+                                    <input type="email" name="email" class="wpcf7-form-control wpcf7-text"
                                            placeholder="Your Email (required)">
                                 </span>
                                 </label>
                             </p>
                             <p><label>
                                 <span class="wpcf7-form-control-wrap your-subject">
-                                    <input type="text" name="your-subject" value=""
-                                           class="wpcf7-form-control wpcf7-text" placeholder="Subject">
+                                    <input type="number" name="number" value=""
+                                           class="wpcf7-form-control wpcf7-text" placeholder="Number" required>
                                 </span>
                                 </label>
                             </p>
                             <p><label>
                                 <span class="wpcf7-form-control-wrap your-message">
-                                    <textarea name="your-message" class="wpcf7-form-control wpcf7-textarea"
+                                    <textarea name="message" class="wpcf7-form-control wpcf7-textarea"
                                               placeholder="Message"></textarea>
                                 </span>
                                 </label></p>
