@@ -13,7 +13,7 @@
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">{{$slug1}}</a></li>
                 @if(isset($slug_detail))
-                     <li class="breadcrumb-item">{{$slug_detail->nav_name ?? ''}}</li>
+                     <li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
                 @endif
               </ol>
             </nav>
