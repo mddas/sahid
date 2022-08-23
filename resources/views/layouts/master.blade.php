@@ -150,7 +150,7 @@
                         <div class="menu-useful-links-container">
                             <ul id="menu-useful-links" class="menu">
                                 @foreach($services as $service)
-                                    <li><a href="/service/{{$service->nav_name}}">{{$service->caption}}</a>
+                                    <li><a href="/department/{{$service->nav_name}}">{{$service->caption}}</a>
                                 @endforeach
                             </ul>
                         </div>
