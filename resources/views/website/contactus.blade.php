@@ -8,8 +8,8 @@
             <h1 class="pagetitle__heading my-3">Our Services</h1>
             <nav>
               <ol class="breadcrumb my-3">
-                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                <li class="breadcrumb-item">Services</li>
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item">contact</li>
               </ol>
             </nav>
           </div><!-- /.col-12 -->
