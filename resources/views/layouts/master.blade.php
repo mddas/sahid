@@ -146,7 +146,7 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <div id="nav_menu-2" class="widget widget_nav_menu">
-                        <h3 class="widget-title">Services</h3>
+                        <h3 class="widget-title">Department</h3>
                         <div class="menu-useful-links-container">
                             <ul id="menu-useful-links" class="menu">
                                 @foreach($services as $service)

@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-between flex-wrap align-items-center">
-            <h1 class="pagetitle__heading my-3">{{$slug_detail->caption ?? $slug1}}</h1>
+            <h1 class="pagetitle__heading my-3">{{$slug_detail->caption ?? $normal->caption}}</h1>
             <nav>
               <ol class="breadcrumb my-3">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
