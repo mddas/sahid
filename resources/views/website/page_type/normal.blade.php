@@ -6,11 +6,11 @@
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-between flex-wrap align-items-center">
-            <h1 class="pagetitle__heading my-3">{{$slug_detail->caption ?? $normal->caption}}</h1>
+            <h1 class="pagetitle__heading my-3">{{$slug_detail->caption ?? $slug1->caption}}</h1>
             <nav>
               <ol class="breadcrumb my-3">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/{{$slug1}}">{{$normal->caption ?? $slug1}}</a></li>
+                <li class="breadcrumb-item"><a href="/{{$slug1}}">{{$slug1->caption}}</a></li>
                 @if(isset($slug_detail))
                   <li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
                 @endif
@@ -34,7 +34,7 @@
 			<div class="col-lg-4">
 			<aside class="sidebar has-marign-left sticky-top">
               <div class="widget widget-services">
-                <h5 class="widget__title">@if($slug1=="department") Our Department @elseif($slug1=="news-event") Latest News & Events @else {{$slug_detail->caption ?? $slug1}} @endif</h5>
+                <h5 class="widget__title">@if($slug1->nav_name=="department") Our Department @elseif($slug1->nav_name=="news-event") Latest News & Events @else {{$slug_detail->nav_name->caption ?? $slug1}} @endif</h5>
                 <div class="widget-content">
                   <ul class="list-unstyled mb-0">
                     @foreach($childs as $child)

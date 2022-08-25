@@ -339,11 +339,12 @@ class HomeController extends Controller
             return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Service"){
-            $services = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
+            $services = Navigation::query()->where('parent_page_id',$subcategory_id)->first();
             return view("website.page_type.service")->with(['slug1'=>$slug1,'services'=>$services,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Normal"){
             $normal = Navigation::find($subcategory_id);
+            $slug1 = Navigation::where('nav_name',$slug1);
             return view("website.page_type.normal")->with(['slug1'=>$slug1,'normal'=>$normal,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "News & Events"){
