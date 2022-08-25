@@ -34,11 +34,11 @@
 			<div class="col-lg-4">
 			<aside class="sidebar has-marign-left sticky-top">
               <div class="widget widget-services">
-                <h5 class="widget__title">@if($slug1->nav_name=="department") Our Department @elseif($slug1->nav_name=="news-event") Latest News & Events @else {{$slug_detail->nav_name->caption ?? $slug1}} @endif</h5>
+                <h5 class="widget__title">@if($slug1->nav_name=="department") Our Department @elseif($slug1->nav_name=="news-event") Latest News & Events @else {{$slug_detail->nav_name->caption ?? $slug1->caption}} @endif</h5>
                 <div class="widget-content">
                   <ul class="list-unstyled mb-0">
                     @foreach($childs as $child)
-                      <li><a href="/{{$slug1}}/{{$child->nav_name}}" class="active"><span>{{$child->caption}}</span><i class="fa fa-arrow-right"></i></a></li>
+                      <li><a href="/{{$slug1->nav_name}}/{{$child->nav_name}}" class="active"><span>{{$child->caption}}</span><i class="fa fa-arrow-right"></i></a></li>
                     @endforeach
                   </ul>
                 </div><!-- /.widget-content -->

@@ -212,8 +212,9 @@ class HomeController extends Controller
         }
         elseif($category_type == "Normal"){
             //return $category_id;
+            $slug1 = Navigation::where('nav_name',$menu)->first();
             $normal = Navigation::find($category_id);
-            return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$menu,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
+            return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$slug1,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
         }
         else{
             if($jobs!=null){        
@@ -305,10 +306,12 @@ class HomeController extends Controller
            }
            elseif(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="Service"){//sub single service
                $normal = Navigation::where('nav_name',$submenu)->first();
+               $slug1 = Navigation::where('nav_name',$slug1)->first();
                return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$slug1,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
            }
            elseif(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="News & Events"){//sub single service
                $normal = Navigation::where('nav_name',$submenu)->first();
+               $slug1 = Navigation::where('nav_name',$slug1)->first();
                return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$slug1,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
            }
            elseif(Navigation::all()->where('parent_page_id',$subcategory_id)->count()>0){
@@ -329,7 +332,7 @@ class HomeController extends Controller
         else{
              $subcategory_type = null;
          }
-
+         return $category_type;
         if($subcategory_type == "Photo Gallery"){//Albumb 
             $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
             return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
@@ -344,7 +347,7 @@ class HomeController extends Controller
         }
         elseif($subcategory_type == "Normal"){
             $normal = Navigation::find($subcategory_id);
-            $slug1 = Navigation::where('nav_name',$slug1);
+            $slug1 = Navigation::where('nav_name',$slug1)->first();
             return view("website.page_type.normal")->with(['slug1'=>$slug1,'normal'=>$normal,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "News & Events"){
