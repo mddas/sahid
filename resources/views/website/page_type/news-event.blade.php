@@ -6,11 +6,11 @@
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-between flex-wrap align-items-center">
-            <h1 class="pagetitle__heading my-3">{{$slug_detail->caption ?? $slug1}}</h1>
+            <h1 class="pagetitle__heading my-3">{{$slug_detail->caption ?? $slug1->capation}}</h1>
             <nav>
               <ol class="breadcrumb my-3">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">{{$slug1}}</a></li>
+                <li class="breadcrumb-item"><a href="#">{{$slug1->caption}}</a></li>
                 @if(isset($slug_detail))
                   <li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
                 @endif
@@ -28,7 +28,7 @@
             @foreach($newsevents as $newevent)
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="outer-box">
-                            <a href="/{{$slug1}}/{{$newevent->nav_name}}">
+                            <a href="/{{$slug1->nav_name}}/{{$newevent->nav_name}}">
                                 <div class="box" style="background-image: url({{$newevent->banner_image}})">
                                     <div class="box-overlay">
                                         <h3>{{$newevent->caption}}</h3>

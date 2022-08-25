@@ -191,24 +191,28 @@ class HomeController extends Controller
         }
         if($category_type == "Photo Gallery"){//albums
             //return "return to page gallary";
+            $slug1 = Navigation::where('nav_name',$menu)->first();
             $albumbs = Navigation::query()->where('parent_page_id',$category_id)->where('page_status','1')->where('page_type','Photo Gallery')->latest()->get();
-            return view("website.page_type.album")->with(['slug1'=>$menu,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
+            return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
         }
         if($category_type == "News & Events"){
             //return "return to page gallary";
+            $slug1 = Navigation::where('nav_name',$menu)->first();
             $newsevents = Navigation::query()->where('parent_page_id',$category_id)->where('page_status','1')->latest()->get();
-            return view("website.page_type.news-event")->with(['slug1'=>$menu,'newsevents'=>$newsevents,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
+            return view("website.page_type.news-event")->with(['slug1'=>$slug1,'newsevents'=>$newsevents,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
         }
         if($category_type == "Doctor"){
+            $slug1 = Navigation::where('nav_name',$menu)->first();
             //return "return to page gallary";
             //$doctors = Navigation::query()->where('parent_page_id',$category_id)->where('page_status','1')->latest()->get();            
             $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->get();
-            return view("website.page_type.doctor")->with(['slug1'=>$menu,'doctors'=>$doctors,'menus'=>$menus]);
+            return view("website.page_type.doctor")->with(['slug1'=>$slug1,'doctors'=>$doctors,'menus'=>$menus]);
         }
         elseif($category_type == "Service"){
+            $slug1 = Navigation::where('nav_name',$menu)->first();
             // return "return to view Notice";
             $services = Navigation::query()->where('parent_page_id',$category_id)->latest()->get();
-            return view("website.page_type.service")->with(['slug1'=>$menu,'services'=>$services,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
+            return view("website.page_type.service")->with(['slug1'=>$slug1,'services'=>$services,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting]);
         }
         elseif($category_type == "Normal"){
             //return $category_id;
@@ -334,14 +338,17 @@ class HomeController extends Controller
          }
          return $category_type;
         if($subcategory_type == "Photo Gallery"){//Albumb 
+            $slug1 = Navigation::where('nav_name',$slug1)->first();
             $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
             return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         if($subcategory_type == "Video Gallery"){//Albumb 
+            $slug1 = Navigation::where('nav_name',$slug1)->first();
             $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
             return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Service"){
+            $slug1 = Navigation::where('nav_name',$slug1)->first();
             $services = Navigation::query()->where('parent_page_id',$subcategory_id)->first();
             return view("website.page_type.service")->with(['slug1'=>$slug1,'services'=>$services,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
@@ -351,10 +358,12 @@ class HomeController extends Controller
             return view("website.page_type.normal")->with(['slug1'=>$slug1,'normal'=>$normal,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "News & Events"){
+            $slug1 = Navigation::where('nav_name',$slug1)->first();
             $newsevents = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
             return view("website.page_type.news-event")->with(['slug1'=>$slug1,'newsevents'=>$newsevents,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Doctor"){
+            $slug1 = Navigation::where('nav_name',$slug1)->first();
             $newsevents = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
             return view("website.page_type.doctor")->with(['slug1'=>$slug1,'newsevents'=>$newsevents,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }

@@ -4,11 +4,11 @@
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-between flex-wrap align-items-center">
-            <h1 class="pagetitle__heading my-3">{{$slug_detail->nav_name ?? $slug1}}</h1>
+            <h1 class="pagetitle__heading my-3">{{$slug_detail->nav_name ?? $slug1->caption}}</h1>
             <nav>
               <ol class="breadcrumb my-3">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">{{$slug1}}</a></li>
+                <li class="breadcrumb-item"><a href="#">{{$slug1->caption}}</a></li>
                 @if(isset($slug_detail))
                   <li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
                 @endif
