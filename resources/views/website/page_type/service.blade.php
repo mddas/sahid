@@ -33,7 +33,7 @@
                         <div class="service__content">
                             <h4 class="service__title">{{$service->caption}}</h4>
                             <p class="service__desc">{{$service->short_content}}</p>
-                          @if($slug1!="services")
+                          @if($slug1->nav_name!="services")
                             <a href="/{{$slug1->nav_name}}/{{$service->nav_name}}" class="btn btn-outline">
                               <span>Read More</span>
                               <i class="fa fa-arrow-right"></i>
