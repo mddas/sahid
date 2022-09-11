@@ -336,7 +336,6 @@ class HomeController extends Controller
         else{
              $subcategory_type = null;
          }
-         return $category_type;
         if($subcategory_type == "Photo Gallery"){//Albumb 
             $slug1 = Navigation::where('nav_name',$slug1)->first();
             $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
