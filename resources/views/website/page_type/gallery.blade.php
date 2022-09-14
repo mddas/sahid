@@ -6,14 +6,14 @@
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-between flex-wrap align-items-center">
-            <h1 class="pagetitle__heading my-3">{{$slug_detail->caption ?? $slug1}}</h1>
+            <h1 class="pagetitle__heading my-3">{{$slug_detail->caption ?? $slug1->caption ?? 'Gallery'}}</h1>
             <nav>
               <ol class="breadcrumb my-3">
-				<li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">{{$slug1}}</a></li>
-				@if(isset($slug_detail))
-                	<li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
-				@endphp
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">{{$slug1->caption ?? 'gallary'}}</a></li>
+                @if(isset($slug_detail))
+                     <li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
+                @endif
               </ol>
             </nav>
           </div><!-- /.col-12 -->
@@ -49,7 +49,7 @@
 	    <script src="/website/js/gallery/picturefill.min.js"></script>
 	    <script src="/website/js/gallery/lightgallery.js"></script>
 	    <script src="/website/js/gallery/lg-pager.js"></script>
-	    <script src="/website/js/gallery/lg-autoplay.js"></script>
+	    <script src="/website/js/gallery/ulg-autoplay.js"></script>
 	    <script src="/website/js/gallery/lg-fullscreen.js"></script>
 	    <script src="/website/js/gallery/lg-zoom.js"></script>
 	    <script src="/website/js/gallery/lg-hash.js"></script>
@@ -57,23 +57,11 @@
 	    <!--End gllery js -->
 
 		<!-- Theme js -->
-		<script src="js/theme.js"></script>
+		<script src="/website/js/theme.js"></script>
 
 		<script>
-        lightGallery(document.getElementById('lightgallery'));
-
-        $(function() {
-        var selectedClass = "";
-        $(".filter").click(function(){
-        selectedClass = $(this).attr("data-rel");
-        $("#lightgallery").fadeTo(100, 0.1);
-        $("#lightgallery div").not("."+selectedClass).fadeOut().removeClass('animation');
-        setTimeout(function() {
-        $("."+selectedClass).fadeIn().addClass('animation');
-        $("#lightgallery").fadeTo(300, 1);
-        }, 300);
-        });
-        });
+          lightGallery(document.getElementById('lightgallery'));
     	</script>
-    @endsection
-    
+
+
+@endsection

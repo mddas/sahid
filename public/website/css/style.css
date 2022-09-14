@@ -26355,6 +26355,125 @@ textarea {
     visibility: hidden; }
   100% {
     visibility: visible; } }
+
+    /*========================== Gallery Page ==========================*/
+.gallery-view {
+  margin-bottom: 0;
+}
+.gallery-view .item a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  max-height: 200px;
+  float: left;
+}
+.gallery-view .item a > img {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+.gallery-view .item a .gallery-overlay {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 26, 87, 0.7);
+  border-radius: 5px 5px 0 0;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+.gallery-view .item a .gallery-overlay img {
+  margin: 0 auto;
+  color: #fff;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.gallery-view .item a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.gallery-view .item a:hover > img:before {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+.gallery-view .item a:hover .gallery-overlay {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.gallery-view .item a:hover .gallery-overlay .gallery {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.gallery button {
+  background: transparent;
+  color: #34533f;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px 15px 5px 15px;
+  text-transform: uppercase;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.gallery .btn.active,
+.btn:active {
+  box-shadow: none;
+  outline: none;
+}
+.gallery .btn:hover {
+  box-shadow: none;
+  outline: none;
+  border-color: #003579;
+  color: #003579;
+}
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#lightgallery .item {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  max-height: 200px;
+  overflow: hidden;
+}
+#lightgallery .item h5 {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  background: #001648b5;
+  z-index: 9;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 8px 10px;
+}
+
 /*
 https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 

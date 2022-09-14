@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12  col-sm-12">
 
-                <h2 class="section-title text-center">Our Specilists</h2>
+                <h2 class="section-title text-center">{{$slug_detail->caption ?? $slug1->caption}}</h2>
 
             </div>
         </div>
