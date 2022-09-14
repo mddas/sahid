@@ -77,7 +77,7 @@
                                 <li>  <a href="/">Home</a> </li>
                                 <!------start menu--------->
                                   @foreach($menus as $menu)
-                                     <li><a href="{{route('category',$menu->nav_name)}}">{{$menu->caption}}</a>
+                                     <li><a href="@if($menu->nav_name=='our-team-all') # @else {{route('category',$menu->nav_name)}} @endif">{{$menu->caption}}</a>
                                         <ul>
 
                                             @foreach($menu->childs as $submenu)
