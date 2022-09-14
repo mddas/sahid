@@ -301,9 +301,11 @@ class HomeController extends Controller
         }
         
         //
+       
         if(Navigation::all()->where('nav_name',$submenu)->count()>0){
             
             $subcategory_id = Navigation::all()->where('nav_name',$slug1)->first()->id;
+            $sub_sub_id = Navigation::all()->where('nav_name',$submenu)->first()->id;//group/group/page_type(doctor)
            if(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="Photo Gallery"){//single gallary
                $photos = Navigationitems::query()->where('navigation_id',$subcategory_id)->latest()->get();
               return view("website.page_type.gallery")->with(['slug1'=>$slug1,'photos'=>$photos,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
@@ -317,6 +319,9 @@ class HomeController extends Controller
                $normal = Navigation::where('nav_name',$submenu)->first();
                $slug1 = Navigation::where('nav_name',$slug1)->first();
                return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$slug1,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+           }
+            elseif(Navigation::all()->where('parent_page_id',$sub_sub_id)->first()->page_type=="Doctor"){//sub single service
+                $subcategory_type = "Doctor";
            }
             elseif(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="Normal"){//sub single service
                
@@ -342,6 +347,7 @@ class HomeController extends Controller
         else{
              $subcategory_type = null;
          }
+         #return $subcategory_type;
         if($subcategory_type == "Photo Gallery"){//Albumb 
             $slug1 = Navigation::where('nav_name',$slug1)->first();
             $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
@@ -367,10 +373,10 @@ class HomeController extends Controller
             $newsevents = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
             return view("website.page_type.news-event")->with(['slug1'=>$slug1,'newsevents'=>$newsevents,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
-        elseif($subcategory_type == "Doctor"){
+        if($subcategory_type == "Doctor"){
             $slug1 = Navigation::where('nav_name',$slug1)->first();
-            $newsevents = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
-            return view("website.page_type.doctor")->with(['slug1'=>$slug1,'newsevents'=>$newsevents,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+            $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->get();
+            return view("website.page_type.doctor")->with(['slug1'=>$slug1,'doctors'=>$doctors,'menus'=>$menus,'slug_detail'=>$slug_detail]);
         }
         else{
             return redirect("/");
