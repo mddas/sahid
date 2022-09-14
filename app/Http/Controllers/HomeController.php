@@ -88,7 +88,13 @@ class HomeController extends Controller
             $message = null;
         }  
         //return $news;
-        $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->paginate(8);
+        if(Navigation::all()->where('page_type','Doctor')->count()>0){
+            $doctors_id = Navigation::all()->where('nav_name','doctor')->where('page_type','Group')->first()->id;
+            $doctors = Navigation::query()->where('page_type','Doctor')->where('parent_page_id',$doctors_id)->where('page_status','1')->latest()->paginate(8);
+        }
+        else{
+            $doctors = [];
+        }
         if(Navigation::query()->where('nav_category','Main')->where('nav_name', 'LIKE', "%services%")->where('page_type','Group')->latest()->first()!=null){
             $service_id = Navigation::query()->where('nav_category','Main')->where('nav_name', 'LIKE', "%services%")->where('page_type','Group')->latest()->first()->id;
             $services = Navigation::query()->where('parent_page_id',$service_id)->where('page_type','Service')->latest()->paginate(8);
