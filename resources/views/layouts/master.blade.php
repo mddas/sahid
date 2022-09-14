@@ -39,7 +39,7 @@
   <meta property="twitter:title" content="{{$seo->page_title ?? $global_setting->page_title}}">
   <meta property="twitter:description" content="{{$seo->page_description ?? $global_setting->page_description}}">
   <meta property="twitter:image" content="{{$seo->banner_image ?? '/uploads/icons/'.$global_setting->site_logo}}">
-  <link rel="icon" type="image/png" sizes="56x56" href="{{$global_setting->favicon}}"> 
+  <link rel="icon" type="image/png" sizes="56x56" href="/uploads/icons/{{$global_setting->favicon}}"> 
 <!-----END SEO------->
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900|Work+Sans:300,400,500,600,700,800" rel="stylesheet">
