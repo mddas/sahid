@@ -375,7 +375,7 @@ class HomeController extends Controller
         }
         if($subcategory_type == "Doctor"){
             $slug1 = Navigation::where('nav_name',$slug1)->first();
-            $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->latest()->get();
+            $doctors = Navigation::query()->where('page_type','Doctor')->where('page_status','1')->where('parent_page_id',$sub_sub_id)->latest()->get();
             return view("website.page_type.doctor")->with(['slug1'=>$slug1,'doctors'=>$doctors,'menus'=>$menus,'slug_detail'=>$slug_detail]);
         }
         else{
