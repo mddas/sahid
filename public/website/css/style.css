@@ -26015,6 +26015,10 @@ textarea {
     left: 0;
     z-index: 999;
     top: 100%; }
+    .main-menu-container-collapse{
+      height: 450px;
+      overflow: scroll;
+    }
 
   .main-navigation ul {
     border: 1px solid #d6d3d3;
