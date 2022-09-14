@@ -10,7 +10,7 @@
             <nav>
               <ol class="breadcrumb my-3">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">{{$slug1->caption ?? 'gallary'}}</a></li>
+                <li class="breadcrumb-item"><a href="#">{{$slug1->caption ?? 'gallery'}}</a></li>
                 @if(isset($slug_detail))
                      <li class="breadcrumb-item">{{$slug_detail->caption ?? ''}}</li>
                 @endif

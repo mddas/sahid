@@ -320,8 +320,12 @@ class HomeController extends Controller
                $slug1 = Navigation::where('nav_name',$slug1)->first();
                return view("website.page_type.normal")->with(['childs'=>$childs,'slug1'=>$slug1,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
            }
-            elseif(Navigation::all()->where('parent_page_id',$sub_sub_id)->first()->page_type=="Doctor"){//sub single service
-                $subcategory_type = "Doctor";
+          
+           
+            elseif( Navigation::all()->where('parent_page_id',$sub_sub_id)->count()>0){//sub single service
+                if(Navigation::all()->where('parent_page_id',$sub_sub_id)->first()->page_type=="Doctor"){
+                     $subcategory_type = "Doctor";
+                }
            }
             elseif(Navigation::all()->where('nav_name',$submenu)->first()->page_type=="Normal"){//sub single service
                

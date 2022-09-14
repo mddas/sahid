@@ -23762,7 +23762,7 @@ header, .business_bliss_main_header {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 999999999;
+  z-index: 9;
   box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 3px;
   animation: smoothScroll 1s forwards; }
 
@@ -26041,11 +26041,12 @@ textarea {
     border-bottom: 1px solid #d6d3d3; }
 
   .main-navigation ul li ul {
-    display: none;
+    display: block;
     box-shadow: none;
     width: 100%;
     position: relative;
     left: auto;
+    top:0;
     visibility: visible;
     opacity: 1;
     transition: none;

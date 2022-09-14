@@ -1,5 +1,5 @@
 @extends("layouts.master")
-@section("content")
+@section("content") 
 
 
 <section class="page-title page-title-layout5 bg-img" style="background-image: url(/website/images/6.jpg) !important; background-size: cover; background-position: center center; padding-top: 120px;">
